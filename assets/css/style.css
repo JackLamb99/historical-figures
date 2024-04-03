@@ -14,12 +14,21 @@ body {
     flex-direction: column;
     font-family: "Rubik", sans-serif;
     font-weight: 500;
-    color: #4c2882;
-    background-color: #e8d4bb;
+    color: #654C8C;
+    background-image: url("../images/spikes_background_pattern.webp");
     height: 100vh;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: "Galada", cursive;
     font-weight: 400;
+}
+
+.younger-colour {
+    color: #4589E5;
+}
+
+.older-colour {
+    color: #8D021F;
 }
