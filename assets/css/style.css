@@ -1,0 +1,25 @@
+/* Google Fonts import link for Galada and Rubik fonts */
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* Override default browser styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: #4c2882;
+    background-color: #e8d4bb;
+    height: 100vh;
+}
+
+h1, h2 {
+    font-family: "Galada", cursive;
+    font-weight: 400;
+}
