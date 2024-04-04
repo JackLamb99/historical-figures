@@ -17,18 +17,77 @@ body {
     color: #654C8C;
     background-image: url("../images/spikes_background_pattern.webp");
     height: 100vh;
+    align-items: center;
 }
 
 h1,
 h2 {
     font-family: "Galada", cursive;
     font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    padding: 30px;
+    line-height: 1;
 }
 
 .younger-colour {
-    color: #4589E5;
+    color: #029e61;
 }
 
 .older-colour {
-    color: #8D021F;
+    color: #ff0000;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn {
+    background-color: white;
+    color: #654c8c;
+    font-size: 30px;
+    border: 5px solid #654c8c;
+    border-radius: 15px;
+}
+
+.btn:hover {
+    background-color: #654c8c;
+    color: white;
+    transition: .75s;
+}
+
+.btn-menu {
+    display: block;
+    width: 180px;
+    height: 60px;
+    margin: 10px auto 10px;
+    align-items: center;
+}
+
+#menu-highscore {
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+}
+
+#github-link {
+    font-size: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* .menu-area {
+    display: none;
+} */
+
+.instructions-area {
+    display: none;
+}
+
+.game-area {
+    display: none;
 }
