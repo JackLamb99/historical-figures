@@ -3,91 +3,115 @@
 
 /* Override default browser styles */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* General styles */
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: "Rubik", sans-serif;
-    font-weight: 500;
-    color: #654C8C;
-    background-image: url("../images/spikes_background_pattern.webp");
-    height: 100vh;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  color: #654c8c;
+  background-image: url("../images/spikes_background_pattern.webp");
+  height: 100vh;
+  align-items: center;
 }
 
-h1,
-h2 {
-    font-family: "Galada", cursive;
-    font-weight: 400;
-    font-size: 60px;
-    text-align: center;
-    padding: 30px;
-    line-height: 1;
+h1 {
+  font-family: "Galada", cursive;
+  font-weight: 400;
+  font-size: 60px;
+  font-size: 20vw;
+  text-align: center;
+  padding: 30px;
+  line-height: 1;
 }
 
 .younger-colour {
-    color: #029e61;
+  color: #029e61;
 }
 
 .older-colour {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .btn {
-    background-color: white;
-    color: #654c8c;
-    font-size: 30px;
-    border: 5px solid #654c8c;
-    border-radius: 15px;
+  background-color: white;
+  color: #654c8c;
+  border: 5px solid #654c8c;
+  border-radius: 15px;
 }
 
 .btn:hover {
-    background-color: #654c8c;
-    color: white;
-    transition: .75s;
+  background-color: #654c8c;
+  color: white;
+  transition: 0.75s;
 }
 
+/* Menu page */
 .btn-menu {
-    display: block;
-    width: 180px;
-    height: 60px;
-    margin: 10px auto 10px;
-    align-items: center;
+  font-size: 10vw;
+  display: block;
+  width: 60vw;
+  padding: 10px 0 10px;
+  margin: 10px auto 10px;
+  align-items: center;
 }
 
 #menu-highscore {
-    font-size: 25px;
-    text-align: center;
-    padding: 20px;
+  font-size: 8vw;
+  text-align: center;
+  padding: 20px;
 }
 
 #github-link {
-    font-size: 50px;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    margin: 10px 0;
+  font-size: 15vw;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 10px 0;
 }
 
+/* Temporary styles to hide specific areas */
 /* .menu-area {
     display: none;
 } */
 
 .instructions-area {
-    display: none;
+  display: none;
 }
 
 .game-area {
-    display: none;
+  display: none;
+}
+
+/* Media Query: large mobile devices / tablets (500px and up) */
+@media screen and (min-width: 500px) {
+  /* General styles */
+  h1 {
+    font-size: 100px;
+    padding: 50px;
+  }
+
+  .btn-menu {
+    font-size: 50px;
+    width: 300px;
+  }
+
+  #menu-highscore {
+    font-size: 40px;
+  }
+
+  #github-link {
+    font-size: 75px;
+  }
 }
