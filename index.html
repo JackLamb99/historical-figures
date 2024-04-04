@@ -43,37 +43,73 @@
   </head>
 
   <body>
-    <div class="menu-area">
-      <h1><span class="younger-colour">Historical</span><br><span class="older-colour">Figures</span></h1>
+    <!-- Main menu, opens as default -->
+    <div id="menu-area">
+      <h1>
+        <span class="older-colour">Historical</span><br /><span
+          class="younger-colour"
+          >Figures</span
+        >
+      </h1>
       <button id="btn-instructions" class="btn btn-menu">Instructions</button>
       <button id="btn-play" class="btn btn-menu">Play</button>
-      <div id="menu-highscore" class="highscore">Your Highscore: ?</div>
-      <div id="github-link"><i class="fa-brands fa-github"></i></div>
+      <div id="menu-highscore" class="high-score">High Score: ?</div>
+      <!-- GitHub repository link -->
+      <a
+        href="https://github.com/JackLamb99/historical-figures"
+        target="_blank"
+        id="github-link"
+        aria-label="Click to go to the Historical Figures GitHub repository"
+        ><i class="fa-brands fa-github"></i
+      ></a>
     </div>
-    <div class="instructions-area">
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <!-- Instructions, hidden by default, displays onclick of "Instructions" button -->
+    <div id="instructions-area">
+      <div id="back-arrow"><i class="fa-solid fa-circle-left"></i></div>
+      <h2>How to Play</h2>
+      <div id="instructions-text">
+        <ul id="instructions-list">
+          <li>
+            A card will present a historical figure, showcasing their name, a
+            brief description, and their year of birth.
+          </li>
+          <br />
+          <li>
+            A second card will be displayed with only the name of another
+            historical figure. Players will have 10 seconds to determine whether
+            this individual was born before ('Older') or born after ('Younger')
+            the first figure presented.
+          </li>
+          <br />
+          <li>
+            Each correct guess earns the player 1 point, the game will continue
+            until the player makes an incorrect guess.
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="game-area">
+    <!-- Game content, hidden by default, displays onclick of "Play" button -->
+    <div id="game-area">
+      <!-- Scores -->
       <div id="game-scores">
-        <div class="highscore"></div>
+        <div class="high-score"></div>
         <div class="current-score"></div>
       </div>
+      <!-- Base Card, displays a historical figure and their info -->
       <div id="base-card" class="figure-card">
         <div id="base-figure-name" class="figure-name"></div>
         <div id="base-figure-description" class="figure-description"></div>
         <div id="base-figure-year" class="figure-year"></div>
       </div>
+      <!-- Divider, contains the timer and correct/incorrect indicator -->
       <div id="divider">
         <div></div>
       </div>
+      <!-- Guess Card, displays only the name of another historical figure, users must guess if they are younger or older than the Base Card -->
       <div id="guess-card" class="figure-card">
         <div id="guess-name"></div>
       </div>
+      <!-- Reveal Card, displays once the user makes a guess to show full information on the historical figure -->
       <div id="reveal-card" class="figure-card">
         <div id="reveal-figure-name" class="figure-name"></div>
         <div id="reveal-figure-description" class="figure-description"></div>
@@ -86,5 +122,6 @@
         <button id="btn-again" class="btn btn-game"></button>
       </div>
     </div>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

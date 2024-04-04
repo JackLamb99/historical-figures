@@ -1,6 +1,19 @@
 /* Google Fonts import link for Galada and Rubik fonts */
 @import url("https://fonts.googleapis.com/css2?family=Galada&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
+/* Temporary styles to hide specific areas */
+#menu-area {
+  display: none;
+}
+
+/* #instructions-area {
+display: none;
+} */
+
+#game-area {
+  display: none;
+}
+
 /* Override default browser styles */
 * {
   padding: 0;
@@ -17,7 +30,6 @@ body {
   color: #654c8c;
   background-image: url("../images/spikes_background_pattern.webp");
   height: 100vh;
-  align-items: center;
 }
 
 h1 {
@@ -26,8 +38,17 @@ h1 {
   font-size: 60px;
   font-size: 20vw;
   text-align: center;
-  padding: 30px;
+  padding-top: 30px;
   line-height: 1;
+}
+
+h2 {
+  font-family: "Galada", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  font-size: 15vw;
+  text-align: center;
+  padding: 10px;
 }
 
 .younger-colour {
@@ -38,21 +59,19 @@ h1 {
   color: #ff0000;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .btn {
-  background-color: white;
-  color: #654c8c;
+  background-color: #654c8c;
+  color: #ffffff;
   border: 5px solid #654c8c;
   border-radius: 15px;
 }
 
 .btn:hover {
-  background-color: #654c8c;
-  color: white;
-  transition: 0.75s;
+  background-color: #ff7518;
+  border-color: #ff7518;
+  color: #ffffff;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 /* Menu page */
@@ -68,11 +87,12 @@ ul {
 #menu-highscore {
   font-size: 8vw;
   text-align: center;
-  padding: 20px;
+  margin: 10px;
 }
 
 #github-link {
   font-size: 15vw;
+  text-decoration: none;
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -81,17 +101,36 @@ ul {
   margin: 10px 0;
 }
 
-/* Temporary styles to hide specific areas */
-/* .menu-area {
-    display: none;
-} */
-
-.instructions-area {
-  display: none;
+#github-link:hover {
+  text-decoration: none;
+  color: #ff7518;
+  transition: 0.4s;
 }
 
-.game-area {
-  display: none;
+/* Instructions page */
+#instructions-text {
+  margin: 0 10px 0;
+  max-width: 500px;
+}
+
+#instructions-list {
+  list-style-type: none;
+  text-align: center;
+  font-size: 5vw;
+}
+
+#back-arrow {
+  font-size: 15vw;
+  text-decoration: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 10px 0 0 10px;
+}
+
+#back-arrow:hover {
+  color: #ff7518;
+  transition: 0.4s;
 }
 
 /* Media Query: large mobile devices / tablets (500px and up) */
@@ -102,6 +141,11 @@ ul {
     padding: 50px;
   }
 
+  h2 {
+    font-size: 75px;
+  }
+
+  /* Menu page */
   .btn-menu {
     font-size: 50px;
     width: 300px;
@@ -113,5 +157,23 @@ ul {
 
   #github-link {
     font-size: 75px;
+  }
+
+  /* Instructions page */
+  #instructions-text {
+    margin: 0 auto 0;
+  }
+
+  #instructions-list {
+    font-size: 25px;
+  }
+
+  #back-arrow {
+    font-size: 75px;
+  }
+  
+  #back-arrow:hover {
+    color: #ff7518;
+    transition: 0.4s;
   }
 }
