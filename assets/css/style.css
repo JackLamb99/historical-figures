@@ -24,24 +24,6 @@
   display: none;
 }
 
-/* Hidden as default, displays on-click of either action-button */
-#guess-card {
-  display: none !important;
-}
-
-#reveal-card {
-  display: block !important;
-}
-
-/* Action buttons hidden at default, display when an incorrect answer is submitted */
-.btn-reveal-card {
-  display: block !important;
-}
-
-.btn-game-ended {
-  display: none !important;
-}
-
 /* General styles */
 body {
   display: flex;
@@ -263,6 +245,24 @@ h2 {
   height: 60px;
   padding: 10px 0 10px;
   margin: 0 10px 0;
+}
+
+/* Hidden as default, displays on-click of either action-button */
+#guess-card {
+  display: block;
+}
+
+#reveal-card {
+  display: none;
+}
+
+/* Action buttons hidden at default, display when an incorrect answer is submitted */
+.btn-reveal-card {
+  display: block;
+}
+
+.btn-game-ended {
+  display: none;
 }
 
 /* Media Query: medium mobile devices (400px and up) */
