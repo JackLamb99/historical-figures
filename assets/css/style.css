@@ -3,13 +3,15 @@
 
 /* Temporary styles to hide specific areas */
 #menu-area {
-  display: none;
+  display: block;
 }
 
-/* #instructions-area {
+/* Hidden as default, displays on-click of the "Instructions" button */
+#instructions-area {
 display: none;
-} */
+}
 
+/* Hidden as default, displays on-click of the "Play" button */
 #game-area {
   display: none;
 }
@@ -131,6 +133,7 @@ h2 {
 #back-arrow:hover {
   color: #ff7518;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 /* Media Query: large mobile devices / tablets (500px and up) */
