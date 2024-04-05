@@ -1,7 +1,15 @@
 /* Google Fonts import link for Galada and Rubik fonts */
 @import url("https://fonts.googleapis.com/css2?family=Galada&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-/* Temporary styles to hide specific areas */
+/* Override default browser styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Display styles */
+/* Opens as default, hidden on-click of the "Instructions" or "Play" button */
 #menu-area {
   display: block;
 }
@@ -16,11 +24,22 @@
   display: none;
 }
 
-/* Override default browser styles */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* Hidden as default, displays on-click of either action-button */
+#guess-card {
+  display: none !important;
+}
+
+#reveal-card {
+  display: block !important;
+}
+
+/* Action buttons hidden at default, display when an incorrect answer is submitted */
+.btn-reveal-card {
+  display: block !important;
+}
+
+.btn-game-ended {
+  display: none !important;
 }
 
 /* General styles */
@@ -145,7 +164,7 @@ h2 {
 }
 
 #game-cards {
-  /* Sets the container for the cards, leaves enough space for action-buttons below */
+  /* Sets the container size for the cards */
   height: 70vh;
   width: 100%;
   position: absolute;
@@ -158,6 +177,7 @@ h2 {
 }
 
 .figure-card {
+  font-size: 18px;
   background-color: white;
   width: 275px;
   height: 168px;
@@ -167,7 +187,6 @@ h2 {
 }
 
 .figure-name {
-  font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
@@ -186,7 +205,6 @@ h2 {
 }
 
 .figure-info {
-  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -225,7 +243,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1; 
+  z-index: 1;
 }
 
 #action-btns {
@@ -247,21 +265,44 @@ h2 {
   margin: 0 10px 0;
 }
 
-.btn-menu {
-  font-size: 10vw;
-  display: block;
-  width: 60vw;
-  padding: 10px 0 10px;
-  margin: 10px auto 10px;
-  align-items: center;
+/* Media Query: medium mobile devices (400px and up) */
+@media screen and (min-width: 400px) {
+  /* Game page */
+  #game-scores {
+    font-size: 25px;
+  }
+
+  .figure-card {
+    font-size: 23px;
+    width: 340px;
+    height: 208px;
+  }
+
+  .figure-img > img {
+    width: 128px;
+    height: 154px;
+    margin: 5px 5px 0 0;
+  }
+
+  #guess-name {
+    font-size: 43px;
+  }
+
+  #divider-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .btn-game {
+    font-size: 25px;
+    width: 140px;
+    height: 70px;
+    margin: 0 15px 0;
+  }
 }
 
-/* Hidden as default, displays on-click of either action-button */
-#reveal-card {
-  display: none;
-}
-
-/* Media Query: large mobile devices / tablets (500px and up) */
+/* Media Query: large mobile devices (500px and up) */
 @media screen and (min-width: 500px) {
   /* General styles */
   h1 {
@@ -303,5 +344,76 @@ h2 {
   #back-arrow:hover {
     color: #ff7518;
     transition: 0.4s;
+  }
+
+  /* Game page */
+  #game-scores {
+    font-size: 32px;
+  }
+
+  .figure-card {
+    font-size: 28px;
+    width: 420px;
+    height: 258px;
+  }
+
+  .figure-img > img {
+    width: 165px;
+    height: 198px;
+    margin: 5px 10px 0 0;
+  }
+
+  #guess-name {
+    font-size: 54px;
+  }
+
+  #divider-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+  }
+
+  .btn-game {
+    font-size: 30px;
+    width: 170px;
+    height: 85px;
+    margin: 0 20px 0;
+  }
+}
+
+/* Media Query: larger mobile devices / small tablets (600px and up) */
+@media screen and (min-width: 600px) {
+  /* Game page */
+  #game-scores {
+    font-size: 38px;
+  }
+
+  .figure-card {
+    font-size: 34px;
+    width: 510px;
+    height: 312px;
+  }
+
+  .figure-img > img {
+    width: 204px;
+    height: 244px;
+    margin: 5px 10px 0 0;
+  }
+
+  #guess-name {
+    font-size: 64px;
+  }
+
+  #divider-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+
+  .btn-game {
+    font-size: 35px;
+    width: 200px;
+    height: 95px;
+    margin: 0 25px 0;
   }
 }
