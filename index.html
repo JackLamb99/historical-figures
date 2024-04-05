@@ -92,34 +92,77 @@
     <div id="game-area">
       <!-- Scores -->
       <div id="game-scores">
-        <div class="high-score"></div>
-        <div class="current-score"></div>
+        <div>Score: <span class="current-score">0</span></div>
+        <div>High Score: <span class="high-score">0</span></div>
       </div>
-      <!-- Base Card, displays a historical figure and their info -->
-      <div id="base-card" class="figure-card">
-        <div id="base-figure-name" class="figure-name"></div>
-        <div id="base-figure-description" class="figure-description"></div>
-        <div id="base-figure-year" class="figure-year"></div>
-      </div>
-      <!-- Divider, contains the timer and correct/incorrect indicator -->
-      <div id="divider">
-        <div>TESTING THE DISPLAY FUNCTIONS USING VISIBLE TEXT</div>
-      </div>
-      <!-- Guess Card, displays only the name of another historical figure, users must guess if they are younger or older than the Base Card -->
-      <div id="guess-card" class="figure-card">
-        <div id="guess-name"></div>
-      </div>
-      <!-- Reveal Card, displays once the user makes a guess to show full information on the historical figure -->
-      <div id="reveal-card" class="figure-card">
-        <div id="reveal-figure-name" class="figure-name"></div>
-        <div id="reveal-figure-description" class="figure-description"></div>
-        <div id="reveal-figure-year" class="figure-year"></div>
+      <div id="game-cards">
+        <!-- Base Card, displays a historical figure and their info -->
+        <div id="base-card" class="figure-card">
+          <div id="base-figure-name" class="figure-name">
+            Wolfgang Amadeus Mozart
+          </div>
+          <div class="figure-full-info">
+            <div id="base-figure-img" class="figure-img">
+              <img
+                src="assets/images/wolfgang_amadeus_mozart.jpg"
+                alt="A placeholder image of Wolfgang Amadeus Mozart"
+              />
+            </div>
+            <div class="figure-info">
+              <div id="base-figure-description" class="figure-description">
+                Ancient Greek Mathematician, Engineer & Astronomer
+              </div>
+              <div id="base-figure-year" class="figure-year">
+                Born: 1000 BCE
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Divider, contains the timer and correct/incorrect indicator -->
+        <div id="divider">
+          <div id="divider-circle">10</div>
+          <div id="divider-line"></div>
+        </div>
+        <!-- Guess Card, displays only the name of another historical figure, users must guess if they are younger or older than the Base Card -->
+        <div id="guess-card" class="figure-card">
+          <div id="guess-name">Wolfgang Amadeus Mozart</div>
+        </div>
+        <!-- Reveal Card, displays once the user makes a guess to show full information on the historical figure -->
+        <div id="reveal-card" class="figure-card">
+          <div id="reveal-figure-name" class="figure-name">
+            Wolfgang Amadeus Mozart
+          </div>
+          <div class="figure-full-info">
+            <div id="reveal-figure-img" class="figure-img">
+              <img
+                src="assets/images/wolfgang_amadeus_mozart.jpg"
+                alt="A placeholder image of Wolfgang Amadeus Mozart"
+              />
+            </div>
+            <div class="figure-info">
+              <div id="reveal-figure-description" class="figure-description">
+                Ancient Greek Mathematician, Engineer & Astronomer
+              </div>
+              <div id="reveal-figure-year" class="figure-year">
+                Born: 1000 BCE
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="action-btns">
-        <button id="btn-younger" class="btn btn-game"></button>
-        <button id="btn-older" class="btn btn-game"></button>
-        <button id="btn-home" class="btn btn-game"></button>
-        <button id="btn-again" class="btn btn-game"></button>
+        <button id="btn-younger" class="btn btn-game btn-reveal-card">
+          Younger
+        </button>
+        <button id="btn-older" class="btn btn-game btn-reveal-card">
+          Older
+        </button>
+        <button id="btn-home" class="btn btn-game" style="display: none">
+          Menu
+        </button>
+        <button id="btn-again" class="btn btn-game" style="display: none">
+          Play Again
+        </button>
       </div>
     </div>
     <script src="assets/js/script.js"></script>
