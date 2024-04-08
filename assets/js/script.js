@@ -394,7 +394,6 @@ function checkIfOlder() {
 function incrementScore() {
   var currentScore = parseInt(score.innerText);
   var newScore = currentScore + 1;
-
   score.innerText = newScore;
 }
 
@@ -412,6 +411,15 @@ function incorrectAnswerStyle() {
   dividerLine.style.backgroundColor = "#ff0000";
 }
 
+function resetStyles() {
+  revealCard.style.display = "";
+  guessCard.style.display = "";
+  dividerCircle.innerHTML = "10";
+  dividerCircle.style.backgroundColor = "";
+  dividerCircle.style.fontSize = "";
+  dividerLine.style.backgroundColor = "";
+}
+
 // Game actions
 
 // Call the randomFigure function when the "Play" button on the Menu is clicked
@@ -424,6 +432,7 @@ olderBtn.addEventListener("click", function () {
     // User is correct
     correctAnswerStyle();
     incrementScore();
+    setTimeout(resetStyles, 2000);
   } else {
     // User is incorrect
     incorrectAnswerStyle();
@@ -437,6 +446,7 @@ youngerBtn.addEventListener("click", function () {
     // User is correct
     correctAnswerStyle();
     incrementScore();
+    setTimeout(resetStyles, 2000);
   } else {
     // User is incorrect
     incorrectAnswerStyle();
