@@ -324,6 +324,10 @@ var olderBtn = document.getElementById("btn-older");
 var menuBtn = document.getElementById("btn-menu");
 var playAgainBtn = document.getElementById("btn-play-again");
 
+// Scores
+var score = document.getElementById("current-score");
+var highscore = document.getElementById("high-score");
+
 // Diviver text and colour
 var dividerCircle = document.getElementById("divider-circle");
 var dividerLine = document.getElementById("divider-line");
@@ -387,6 +391,27 @@ function checkIfOlder() {
   return randomFigure1.figureYear > randomFigure2.figureYear;
 }
 
+function incrementScore() {
+  var currentScore = parseInt(score.innerText);
+  var newScore = currentScore + 1;
+
+  score.innerText = newScore;
+}
+
+function correctAnswerStyle() {
+  dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
+  dividerCircle.style.backgroundColor = "#029e61";
+  dividerCircle.style.fontSize = "50px";
+  dividerLine.style.backgroundColor = "#029e61";
+}
+
+function incorrectAnswerStyle() {
+  dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  dividerCircle.style.backgroundColor = "#ff0000";
+  dividerCircle.style.fontSize = "50px";
+  dividerLine.style.backgroundColor = "#ff0000";
+}
+
 // Game actions
 
 // Call the randomFigure function when the "Play" button on the Menu is clicked
@@ -397,16 +422,11 @@ olderBtn.addEventListener("click", function () {
   // if randomFigure2 is older
   if (checkIfOlder()) {
     // User is correct
-    dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
-    dividerCircle.style.backgroundColor = "#029e61";
-    dividerCircle.style.fontSize = "50px";
-    dividerLine.style.backgroundColor = "#029e61";
+    correctAnswerStyle();
+    incrementScore();
   } else {
     // User is incorrect
-    dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-    dividerCircle.style.backgroundColor = "#ff0000";
-    dividerCircle.style.fontSize = "50px";
-    dividerLine.style.backgroundColor = "#ff0000";
+    incorrectAnswerStyle();
   }
 });
 
@@ -415,15 +435,10 @@ youngerBtn.addEventListener("click", function () {
   // If randomFigure2 is younger
   if (!checkIfOlder()) {
     // User is correct
-    dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
-    dividerCircle.style.backgroundColor = "#029e61";
-    dividerCircle.style.fontSize = "50px";
-    dividerLine.style.backgroundColor = "#029e61";
+    correctAnswerStyle();
+    incrementScore();
   } else {
     // User is incorrect
-    dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-    dividerCircle.style.backgroundColor = "#ff0000";
-    dividerCircle.style.fontSize = "50px";
-    dividerLine.style.backgroundColor = "#ff0000";
+    incorrectAnswerStyle();
   }
 });
