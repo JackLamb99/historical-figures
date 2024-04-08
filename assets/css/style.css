@@ -249,7 +249,7 @@ h2 {
   margin: 0 10px 0;
 }
 
-/* Hidden as default, displays on-click of either action-button */
+/* Changes display on-click of either action-button */
 #guess-card {
   display: block;
 }
@@ -258,7 +258,7 @@ h2 {
   display: none;
 }
 
-/* Action buttons hidden at default, display when an incorrect answer is submitted */
+/* Changes display when an incorrect answer is submitted */
 .btn-reveal-card {
   display: block;
 }

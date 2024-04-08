@@ -1,4 +1,4 @@
-// Display functions
+// Display variables
 
 // Gets the Menu page
 var menu = document.getElementById("menu-area");
@@ -27,6 +27,8 @@ var revealCard = document.getElementById("reveal-card");
 // Gets the action buttons to display the "reveal" card
 var actionBtns = document.getElementsByClassName("btn-reveal-card");
 
+// Display functions
+
 // When the user clicks the "Instructions" button, open the Instructions page
 instructionsBtn.onclick = function () {
   instructions.style.display = "block";
@@ -54,7 +56,7 @@ for (var i = 0; i < actionBtns.length; i++) {
 }
 
 // Figures array
-const figures = [
+let figures = [
   {
     figureName: "Aristotle",
     figureImg: `<img src="assets/images/aristotle.webp" alt="A bust depicting Aristotle"/>`,
@@ -297,8 +299,39 @@ const figures = [
   },
 ];
 
-// Get a random figure from the array
+// Game variables
+
+// Base card elements
+var baseFigureName = document.getElementById("base-figure-name");
+var baseFigureImg = document.getElementById("base-figure-img");
+var baseFigureDesc = document.getElementById("base-figure-description");
+var baseFigureYear = document.getElementById("base-figure-year");
+
+// Guess card name
+var guessFigureName = document.getElementById("guess-name");
+
+// Reveal card elements
+var revealFigureName = document.getElementById("reveal-figure-name");
+var revealFigureImg = document.getElementById("reveal-figure-img");
+var revealFigureDesc = document.getElementById("reveal-figure-description");
+var revealFigureYear = document.getElementById("reveal-figure-year");
+
+// Action buttons
+var youngerBtn = document.getElementById("btn-younger");
+var olderBtn = document.getElementById("btn-older");
+var menuBtn = document.getElementById("btn-menu");
+var playAgainBtn = document.getElementById("btn-play-again");
+
+var randomFigure1, randomFigure2;
+
+// Game functions
+
+/**
+ * Gets two random figures from the array and
+ * applies their details to the game cards.
+ */
 function randomFigures() {
+  // Get a random figure from the array
   var chooseRandomFigure1 = Math.floor(Math.random() * figures.length);
   var chooseRandomFigure2 = Math.floor(Math.random() * figures.length);
 
@@ -308,50 +341,77 @@ function randomFigures() {
   }
 
   // Return a random figure from the Figures array
-  var randomFigure1 = figures[chooseRandomFigure1];
-  var randomFigure2 = figures[chooseRandomFigure2];
-  console.log(randomFigure1);
-  console.log(randomFigure2);
+  randomFigure1 = figures[chooseRandomFigure1];
+  randomFigure2 = figures[chooseRandomFigure2];
 
   // Apply the random figures details to the figure cards
-  document.getElementById("base-figure-name").innerText =
-    randomFigure1.figureName;
-  document.getElementById("base-figure-img").innerHTML =
-    randomFigure1.figureImg;
-  document.getElementById("base-figure-description").innerText =
-    randomFigure1.figureDesc;
+  baseFigureName.innerText = randomFigure1.figureName;
+  baseFigureImg.innerHTML = randomFigure1.figureImg;
+  baseFigureDesc.innerText = randomFigure1.figureDesc;
   // Check if the figureYear is a negative number
   if (randomFigure1.figureYear < 0) {
     // Modify the string to display "BCE" after the year if negative
-    document.getElementById("base-figure-year").innerText = `Born: ${Math.abs(
+    baseFigureYear.innerText = `Born: ${Math.abs(
       randomFigure1.figureYear
     )} BCE`;
   } else {
-    document.getElementById(
-      "base-figure-year"
-    ).innerText = `Born: ${randomFigure1.figureYear}`;
+    baseFigureYear.innerText = `Born: ${randomFigure1.figureYear}`;
   }
 
-  document.getElementById("guess-name").innerText = randomFigure2.figureName;
+  guessFigureName.innerText = randomFigure2.figureName;
 
-  document.getElementById("reveal-figure-name").innerText =
-    randomFigure2.figureName;
-  document.getElementById("reveal-figure-img").innerHTML =
-    randomFigure2.figureImg;
-  document.getElementById("reveal-figure-description").innerText =
-    randomFigure2.figureDesc;
+  revealFigureName.innerText = randomFigure2.figureName;
+  revealFigureImg.innerHTML = randomFigure2.figureImg;
+  revealFigureDesc.innerText = randomFigure2.figureDesc;
   // Check if the figureYear is a negative number
   if (randomFigure2.figureYear < 0) {
     // Modify the string to display "BCE" after the year if negative
-    document.getElementById("reveal-figure-year").innerText = `Born: ${Math.abs(
+    revealFigureYear.innerText = `Born: ${Math.abs(
       randomFigure2.figureYear
     )} BCE`;
   } else {
-    document.getElementById(
-      "reveal-figure-year"
-    ).innerText = `Born: ${randomFigure2.figureYear}`;
+    revealFigureYear.innerText = `Born: ${randomFigure2.figureYear}`;
   }
 }
 
+/**
+ * Checks if randomFigure1 (base card) is greater than randomFigure2 (reveal card).
+ * Returns true if randomFigure2 is older.
+ * Returns false if randomFigure2 is younger.
+ */
+function checkIfOlder() {
+  return randomFigure1.figureYear > randomFigure2.figureYear;
+}
+
+// Game actions
+
 // Call the randomFigure function when the "Play" button on the Menu is clicked
 playBtn.addEventListener("click", randomFigures);
+
+// Older button click event handler
+olderBtn.addEventListener("click", function() {
+  // if randomFigure2 is older
+  if (checkIfOlder()) {
+    // User is correct
+    console.log(`Correct answer, ${randomFigure2.figureName} is older!`);
+  } else {
+    // User is incorrect
+    console.log(`Incorrect answer, game over!`);
+  }
+
+  // Update figures for the next round to be added
+})
+
+// Younger button click event handler
+youngerBtn.addEventListener("click", function() {
+  // If randomFigure2 is younger
+  if (!checkIfOlder()) {
+    // User is correct
+    console.log(`Correct answer, ${randomFigure2.figureName} is younger!`);
+  } else {
+    // User is incorrect
+    console.log(`Incorrect answer, game over!`);
+  }
+
+  // Update figures for the next round to be added
+})
