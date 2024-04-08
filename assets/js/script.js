@@ -57,248 +57,301 @@ for (var i = 0; i < actionBtns.length; i++) {
 const figures = [
   {
     figureName: "Aristotle",
-    figureImg: "assets/images/aristotle.webp",
+    figureImg: `<img src="assets/images/aristotle.webp" alt="A bust depicting Aristotle"/>`,
     figureDesc: "Ancient Greek Philosopher & Polymath",
     figureYear: -384,
   },
   {
     figureName: "Alexander the Great",
-    figureImg: "assets/images/alexander_the_great.webp",
+    figureImg: `<img src="assets/images/alexander_the_great.webp" alt="A bust depicting Alexander the Great"/>`,
     figureDesc: "King of Macedonia",
     figureYear: -356,
   },
   {
     figureName: "Archimedes of Syracuse",
-    figureImg: "assets/images/archimedes_of_syracuse.webp",
+    figureImg: `<img src="assets/images/archimedes_of_syracuse.webp" alt="A painting depicting Archimedes of Syracuse"/>`,
     figureDesc: "Ancient Greek Mathematician, Engineer & Astronomer",
     figureYear: -287,
   },
   {
     figureName: "Spartacus",
-    figureImg: "assets/images/spartacus.webp",
+    figureImg: `<img src="assets/images/spartacus.webp" alt="A statue depicting Spartacus"/>`,
     figureDesc: "Thracian Gladiator, Leader of the Third Servile War",
     figureYear: -103,
   },
   {
     figureName: "Julius Caesar",
-    figureImg: "assets/images/julius_caesar.webp",
+    figureImg: `<img src="assets/images/julius_caesar.webp" alt="A bust depicting Julius Caesar"/>`,
     figureDesc: "Roman Ruler, General & Statesman",
     figureYear: -100,
   },
   {
     figureName: "Cleopatra",
-    figureImg: "assets/images/cleopatra.webp",
+    figureImg: `<img src="assets/images/cleopatra.webp" alt="A bust depicting Cleopatra"/>`,
     figureDesc: "Last Active Pharaoh of Ancient Egypt",
     figureYear: -69,
   },
   {
     figureName: "Boudicca",
-    figureImg: "assets/images/boudicca.webp",
+    figureImg: `<img src="assets/images/boudicca.webp" alt="A painting depicting Boudicca"/>`,
     figureDesc: "Ancient British Queen of the Iceni",
     figureYear: 30,
   },
   {
     figureName: "Attila the Hun",
-    figureImg: "assets/images/attila_the_hun.webp",
+    figureImg: `<img src="assets/images/attila_the_hun.webp" alt="A painting depicting Attila the Hun"/>`,
     figureDesc: "Leader of the Hunnic Empire",
     figureYear: 406,
   },
   {
     figureName: "Charlemagne",
-    figureImg: "assets/images/charlemagne.webp",
+    figureImg: `<img src="assets/images/charlemagne.webp" alt="A painting depicting Charlemagne"/>`,
     figureDesc: "King of the Franks, the Lombards & Roman Emperor",
     figureYear: 742,
   },
   {
     figureName: "Alfred the Great",
-    figureImg: "assets/images/alfred_the_great.webp",
+    figureImg: `<img src="assets/images/alfred_the_great.webp" alt="A statue depicting Alfred the Great"/>`,
     figureDesc: "King of the Anglo-Saxons",
     figureYear: 848,
   },
   {
     figureName: "William the Conqueror",
-    figureImg: "assets/images/william_the_conqueror.webp",
+    figureImg: `<img src="assets/images/william_the_conqueror.webp" alt="A painting depicting William the Conqueror"/>`,
     figureDesc: "First Norman King of England",
     figureYear: 1028,
   },
   {
     figureName: "Genghis Khan",
-    figureImg: "assets/images/genghis_khan.webp",
+    figureImg: `<img src="assets/images/genghis_khan.webp" alt="A painting depicting Genghis Khan"/>`,
     figureDesc: "Founder of the Mongol Empire",
     figureYear: 1162,
   },
   {
     figureName: "Joan of Arc",
-    figureImg: "assets/images/joan_of_arc.webp",
+    figureImg: `<img src="assets/images/joan_of_arc.webp" alt="A painting depicting Joan of Arc"/>`,
     figureDesc: "French Saint, Military Leader & Martyr",
     figureYear: 1412,
   },
   {
     figureName: "Leonardo da Vinci",
-    figureImg: "assets/images/leonardo_da_vinci.webp",
+    figureImg: `<img src="assets/images/leonardo_da_vinci.webp" alt="A drawing depicting Leonardo da Vinci"/>`,
     figureDesc: "Italian Renaissance Polymath",
     figureYear: 1452,
   },
   {
     figureName: "Henry VIII",
-    figureImg: "assets/images/henry_VIII.webp",
+    figureImg: `<img src="assets/images/henry_VIII.webp" alt="A painting depicting Henry the eighth"/>`,
     figureDesc: "King of England",
     figureYear: 1491,
   },
   {
     figureName: "Elizabeth I",
-    figureImg: "assets/images/elizabeth_I.webp",
+    figureImg: `<img src="assets/images/elizabeth_I.webp" alt="A painting depicting Elizabeth the first"/>`,
     figureDesc: "Queen of England",
     figureYear: 1533,
   },
   {
     figureName: "Mary, Queen of Scots",
-    figureImg: "assets/images/mary_queen_of_scots.webp",
+    figureImg: `<img src="assets/images/mary_queen_of_scots.webp" alt="A painting depicting Mary, Queen of Scots"/>`,
     figureDesc: "Scottish Queen",
     figureYear: 1542,
   },
   {
     figureName: "William Shakespeare",
-    figureImg: "assets/images/william_shakespeare.webp",
+    figureImg: `<img src="assets/images/william_shakespeare.webp" alt="A painting depicting William Shakespeare"/>`,
     figureDesc: "English Poet, Playwright and Actor",
     figureYear: 1564,
   },
   {
     figureName: "Isaac Newton",
-    figureImg: "assets/images/isaac_newton.webp",
+    figureImg: `<img src="assets/images/isaac_newton.webp" alt="A painting depicting Isaac Newton"/>`,
     figureDesc: "Mathematician, Astronomer & Physicist",
     figureYear: 1644,
   },
   {
     figureName: "Catherine the Great",
-    figureImg: "assets/images/catherine_the_great.webp",
+    figureImg: `<img src="assets/images/catherine_the_great.webp" alt="A painting depicting Catherine the Great"/>`,
     figureDesc: "Empress of Russia",
     figureYear: 1729,
   },
   {
     figureName: "George Washington",
-    figureImg: "assets/images/george_washington.webp",
+    figureImg: `<img src="assets/images/george_washington.webp" alt="A painting depicting George Washington"/>`,
     figureDesc: "First US President",
     figureYear: 1732,
   },
   {
     figureName: "Wolfgang Amadeus Mozart",
-    figureImg: "assets/images/wolfgang_amadeus_mozart.webp",
+    figureImg: `<img src="assets/images/wolfgang_amadeus_mozart.webp" alt="A painting depicting Wolfgang Amadeus Mozart"/>`,
     figureDesc: "Composer",
     figureYear: 1756,
   },
   {
     figureName: "Napoleon Bonaparte",
-    figureImg: "assets/images/napoleon_bonaparte.webp",
+    figureImg: `<img src="assets/images/napoleon_bonaparte.webp" alt="A painting depicting Napoleon Bonaparte"/>`,
     figureDesc: "French Military Leader and Emperor",
     figureYear: 1769,
   },
   {
     figureName: "Abraham Lincoln",
-    figureImg: "assets/images/abraham_lincoln.webp",
+    figureImg: `<img src="assets/images/abraham_lincoln.webp" alt="A photograph of Abraham Lincoln"/>`,
     figureDesc: "16th US President",
     figureYear: 1809,
   },
   {
     figureName: "Queen Victoria",
-    figureImg: "assets/images/queen_victoria.webp",
+    figureImg: `<img src="assets/images/queen_victoria.webp" alt="A photograph of Queen Victoria"/>`,
     figureDesc: "British Queen & Empress of India",
     figureYear: 1819,
   },
   {
     figureName: "Florence Nightingale",
-    figureImg: "assets/images/florence_nightingale.webp",
+    figureImg: `<img src="assets/images/florence_nightingale.webp" alt="A photograph of Florence Nightingale"/>`,
     figureDesc: "Statistician & Founder of Modern Nursing",
     figureYear: 1820,
   },
   {
     figureName: "Vincent van Gogh",
-    figureImg: "assets/images/vincent_van_gogh.webp",
+    figureImg: `<img src="assets/images/vincent_van_gogh.webp" alt="A painting depicting Vincent van Gogh"/>`,
     figureDesc: "Dutch Post-Impressionist Painter",
     figureYear: 1853,
   },
   {
     figureName: "Marie Curie",
-    figureImg: "assets/images/marie_curie.webp",
+    figureImg: `<img src="assets/images/marie_curie.webp" alt="A photograph of Marie Curie"/>`,
     figureDesc: "Polish-French Physicist & Chemist",
     figureYear: 1867,
   },
   {
     figureName: "Winston Churchill",
-    figureImg: "assets/images/winston_churchill.webp",
+    figureImg: `<img src="assets/images/winston_churchill.webp" alt="A photograph of Winston Churchill"/>`,
     figureDesc: "British Wartime Prime Minister",
     figureYear: 1874,
   },
   {
     figureName: "Josef Stalin",
-    figureImg: "assets/images/josef_stalin.webp",
+    figureImg: `<img src="assets/images/josef_stalin.webp" alt="A photograph of Josef Stalin"/>`,
     figureDesc: "Soviet Revolutionary and Dictator",
     figureYear: 1878,
   },
   {
     figureName: "Albert Einstein",
-    figureImg: "assets/images/albert_einstein.webp",
+    figureImg: `<img src="assets/images/albert_einstein.webp" alt="A photograph of Albert Einstein"/>`,
     figureDesc: "German-born Theoretical Physicist",
     figureYear: 1879,
   },
   {
     figureName: "Rosa Parks",
-    figureImg: "assets/images/rosa_parks.webp",
+    figureImg: `<img src="assets/images/rosa_parks.webp" alt="A photograph of Rosa Parks"/>`,
     figureDesc: "American Civil Rights Activist",
     figureYear: 1913,
   },
   {
     figureName: "John F. Kennedy",
-    figureImg: "assets/images/john_f_kennedy.webp",
+    figureImg: `<img src="assets/images/john_f_kennedy.webp" alt="A photograph of John F Kennedy"/>`,
     figureDesc: "35th US President",
     figureYear: 1917,
   },
   {
     figureName: "Nelson Mandela",
-    figureImg: "assets/images/nelson_mandela.webp",
+    figureImg: `<img src="assets/images/nelson_mandela.webp" alt="A photograph of Nelson Mandela"/>`,
     figureDesc: "Activist & President of South Africa",
     figureYear: 1918,
   },
   {
     figureName: "Marilyn Monroe",
-    figureImg: "assets/images/marilyn_monroe.webp",
+    figureImg: `<img src="assets/images/marilyn_monroe.webp" alt="A photograph of Marilyn Monroe"/>`,
     figureDesc: "American Singer",
     figureYear: 1926,
   },
   {
     figureName: "Anne Frank",
-    figureImg: "assets/images/anne_frank.webp",
+    figureImg: `<img src="assets/images/anne_frank.webp" alt="A photograph of Anne Frank"/>`,
     figureDesc: "German-born Jewish Diarist",
     figureYear: 1929,
   },
   {
     figureName: "Elvis Presley",
-    figureImg: "assets/images/elvis_presley.webp",
+    figureImg: `<img src="assets/images/elvis_presley.webp" alt="A photograph of Elvis Presley"/>`,
     figureDesc: "American Singer and Actor",
     figureYear: 1935,
   },
   {
     figureName: "John Lennon",
-    figureImg: "assets/images/john_lennon.webp",
+    figureImg: `<img src="assets/images/john_lennon.webp" alt="A photograph of John Lennon"/>`,
     figureDesc: "English Singer,  Musician & Member of The Beatles",
     figureYear: 1940,
   },
   {
     figureName: "Stephen Hawking",
-    figureImg: "assets/images/stephen_hawking.webp",
+    figureImg: `<img src="assets/images/stephen_hawking.webp" alt="A photograph of Stephen Hawking"/>`,
     figureDesc: "Theoretical Physicist",
     figureYear: 1942,
   },
   {
     figureName: "Diana, Princess of Wales",
-    figureImg: "assets/images/diana_princess_of_wales.webp",
+    figureImg: `<img src="assets/images/diana_princess_of_wales.webp" alt="A photograph of Diana, Princess of Wales"/>`,
     figureDesc: "British Princess",
     figureYear: 1961,
   },
 ];
 
 // Get a random figure from the array
-var chooseRandomFigure = Math.floor(Math.random() * figures.length);
+function randomFigures() {
+  var chooseRandomFigure1 = Math.floor(Math.random() * figures.length);
+  var chooseRandomFigure2 = Math.floor(Math.random() * figures.length);
 
-var randomFigure = figures[chooseRandomFigure];
-console.log(randomFigure);
+  // Ensure the two random figures are not the same
+  while (chooseRandomFigure2 === chooseRandomFigure1) {
+    chooseRandomFigure2 = Math.floor(Math.random() * figures.length);
+  }
+
+  // Return a random figure from the Figures array
+  var randomFigure1 = figures[chooseRandomFigure1];
+  var randomFigure2 = figures[chooseRandomFigure2];
+  console.log(randomFigure1);
+  console.log(randomFigure2);
+
+  // Apply the random figures details to the figure cards
+  document.getElementById("base-figure-name").innerText =
+    randomFigure1.figureName;
+  document.getElementById("base-figure-img").innerHTML =
+    randomFigure1.figureImg;
+  document.getElementById("base-figure-description").innerText =
+    randomFigure1.figureDesc;
+  // Check if the figureYear is a negative number
+  if (randomFigure1.figureYear < 0) {
+    // Modify the string to display "BCE" after the year if negative
+    document.getElementById("base-figure-year").innerText = `Born: ${Math.abs(
+      randomFigure1.figureYear
+    )} BCE`;
+  } else {
+    document.getElementById(
+      "base-figure-year"
+    ).innerText = `Born: ${randomFigure1.figureYear}`;
+  }
+
+  document.getElementById("guess-name").innerText = randomFigure2.figureName;
+
+  document.getElementById("reveal-figure-name").innerText =
+    randomFigure2.figureName;
+  document.getElementById("reveal-figure-img").innerHTML =
+    randomFigure2.figureImg;
+  document.getElementById("reveal-figure-description").innerText =
+    randomFigure2.figureDesc;
+  // Check if the figureYear is a negative number
+  if (randomFigure2.figureYear < 0) {
+    // Modify the string to display "BCE" after the year if negative
+    document.getElementById("reveal-figure-year").innerText = `Born: ${Math.abs(
+      randomFigure2.figureYear
+    )} BCE`;
+  } else {
+    document.getElementById(
+      "reveal-figure-year"
+    ).innerText = `Born: ${randomFigure2.figureYear}`;
+  }
+}
+
+// Call the randomFigure function when the "Play" button on the Menu is clicked
+playBtn.addEventListener("click", randomFigures);
