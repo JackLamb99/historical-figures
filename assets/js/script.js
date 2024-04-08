@@ -1,60 +1,3 @@
-// Display variables
-
-// Gets the Menu page
-var menu = document.getElementById("menu-area");
-
-// Gets the Instructions page
-var instructions = document.getElementById("instructions-area");
-
-// Gets the Game page
-var game = document.getElementById("game-area");
-
-// Gets the button that opens the Instructions page
-var instructionsBtn = document.getElementById("btn-instructions");
-
-// Gets the button that opens the Game page
-var playBtn = document.getElementById("btn-play");
-
-// Gets the back button to return to the Menu page
-var returnBtn = document.getElementById("back-arrow");
-
-// Gets the "guess" card
-var guessCard = document.getElementById("guess-card");
-
-// Gets the "reveal" card
-var revealCard = document.getElementById("reveal-card");
-
-// Gets the action buttons to display the "reveal" card
-var actionBtns = document.getElementsByClassName("btn-reveal-card");
-
-// Display functions
-
-// When the user clicks the "Instructions" button, open the Instructions page
-instructionsBtn.onclick = function () {
-  instructions.style.display = "block";
-  menu.style.display = "none";
-};
-
-// When the user clicks the back button, return to the Menu page
-returnBtn.onclick = function () {
-  menu.style.display = "block";
-  instructions.style.display = "none";
-};
-
-// When the user clicks the "Play" button, open the Game page
-playBtn.onclick = function () {
-  game.style.display = "block";
-  menu.style.display = "none";
-};
-
-// When the user clicks either action button, display the "reveal" card
-for (var i = 0; i < actionBtns.length; i++) {
-  actionBtns[i].addEventListener("click", function () {
-    revealCard.style.display = "block";
-    guessCard.style.display = "none";
-  });
-}
-
 // Figures array
 let figures = [
   {
@@ -299,6 +242,63 @@ let figures = [
   },
 ];
 
+// Display variables
+
+// Gets the Menu page
+var menu = document.getElementById("menu-area");
+
+// Gets the Instructions page
+var instructions = document.getElementById("instructions-area");
+
+// Gets the Game page
+var game = document.getElementById("game-area");
+
+// Gets the button that opens the Instructions page
+var instructionsBtn = document.getElementById("btn-instructions");
+
+// Gets the button that opens the Game page
+var playBtn = document.getElementById("btn-play");
+
+// Gets the back button to return to the Menu page
+var returnBtn = document.getElementById("back-arrow");
+
+// Gets the "guess" card
+var guessCard = document.getElementById("guess-card");
+
+// Gets the "reveal" card
+var revealCard = document.getElementById("reveal-card");
+
+// Gets the action buttons to display the "reveal" card
+var actionBtns = document.getElementsByClassName("btn-reveal-card");
+
+// Display functions
+
+// When the user clicks the "Instructions" button, open the Instructions page
+instructionsBtn.onclick = function () {
+  instructions.style.display = "block";
+  menu.style.display = "none";
+};
+
+// When the user clicks the back button, return to the Menu page
+returnBtn.onclick = function () {
+  menu.style.display = "block";
+  instructions.style.display = "none";
+};
+
+// When the user clicks the "Play" button, open the Game page
+playBtn.onclick = function () {
+  game.style.display = "block";
+  menu.style.display = "none";
+};
+
+// When the user clicks either action button, display the "reveal" card
+for (var i = 0; i < actionBtns.length; i++) {
+  actionBtns[i].addEventListener("click", function () {
+    revealCard.style.display = "block";
+    guessCard.style.display = "none";
+  });
+}
+
 // Game variables
 
 // Base card elements
@@ -316,13 +316,17 @@ var revealFigureImg = document.getElementById("reveal-figure-img");
 var revealFigureDesc = document.getElementById("reveal-figure-description");
 var revealFigureYear = document.getElementById("reveal-figure-year");
 
+var randomFigure1, randomFigure2;
+
 // Action buttons
 var youngerBtn = document.getElementById("btn-younger");
 var olderBtn = document.getElementById("btn-older");
 var menuBtn = document.getElementById("btn-menu");
 var playAgainBtn = document.getElementById("btn-play-again");
 
-var randomFigure1, randomFigure2;
+// Diviver text and colour
+var dividerCircle = document.getElementById("divider-circle");
+var dividerLine = document.getElementById("divider-line");
 
 // Game functions
 
@@ -389,29 +393,37 @@ function checkIfOlder() {
 playBtn.addEventListener("click", randomFigures);
 
 // Older button click event handler
-olderBtn.addEventListener("click", function() {
+olderBtn.addEventListener("click", function () {
   // if randomFigure2 is older
   if (checkIfOlder()) {
     // User is correct
-    console.log(`Correct answer, ${randomFigure2.figureName} is older!`);
+    dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
+    dividerCircle.style.backgroundColor = "#029e61";
+    dividerCircle.style.fontSize = "50px";
+    dividerLine.style.backgroundColor = "#029e61";
   } else {
     // User is incorrect
-    console.log(`Incorrect answer, game over!`);
+    dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+    dividerCircle.style.backgroundColor = "#ff0000";
+    dividerCircle.style.fontSize = "50px";
+    dividerLine.style.backgroundColor = "#ff0000";
   }
-
-  // Update figures for the next round to be added
-})
+});
 
 // Younger button click event handler
-youngerBtn.addEventListener("click", function() {
+youngerBtn.addEventListener("click", function () {
   // If randomFigure2 is younger
   if (!checkIfOlder()) {
     // User is correct
-    console.log(`Correct answer, ${randomFigure2.figureName} is younger!`);
+    dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
+    dividerCircle.style.backgroundColor = "#029e61";
+    dividerCircle.style.fontSize = "50px";
+    dividerLine.style.backgroundColor = "#029e61";
   } else {
     // User is incorrect
-    console.log(`Incorrect answer, game over!`);
+    dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+    dividerCircle.style.backgroundColor = "#ff0000";
+    dividerCircle.style.fontSize = "50px";
+    dividerLine.style.backgroundColor = "#ff0000";
   }
-
-  // Update figures for the next round to be added
-})
+});
