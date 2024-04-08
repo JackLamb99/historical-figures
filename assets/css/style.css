@@ -189,6 +189,7 @@ h2 {
 .figure-info {
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: space-evenly;
 }
 
