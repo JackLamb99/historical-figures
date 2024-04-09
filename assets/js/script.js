@@ -368,7 +368,7 @@ function randomFigures() {
       ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE`
       : `Born: ${randomFigure1.figureYear} CE`;
 
-  guessFigureName.innerText = randomFigure2.figureName;
+  guessFigureName.innerText = `'${randomFigure2.figureName}' is...`;
 
   revealFigureName.innerText = randomFigure2.figureName;
   revealFigureImg.innerHTML = randomFigure2.figureImg;
@@ -407,7 +407,7 @@ function newRandomFigure() {
       ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE`
       : `Born: ${randomFigure1.figureYear} CE`;
 
-  guessFigureName.innerText = randomFigure2.figureName;
+  guessFigureName.innerText = `'${randomFigure2.figureName}' is...`;
 
   revealFigureName.innerText = randomFigure2.figureName;
   revealFigureImg.innerHTML = randomFigure2.figureImg;
@@ -500,14 +500,12 @@ function incrementScore() {
 function correctAnswerStyle() {
   dividerCircle.innerHTML = `<i class="fa-regular fa-circle-check"></i>`;
   dividerCircle.style.backgroundColor = "#029e61";
-  dividerCircle.style.fontSize = "50px";
   dividerLine.style.backgroundColor = "#029e61";
 }
 
 function incorrectAnswerStyle() {
   dividerCircle.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
   dividerCircle.style.backgroundColor = "#ff0000";
-  dividerCircle.style.fontSize = "50px";
   dividerLine.style.backgroundColor = "#ff0000";
 }
 
@@ -569,9 +567,9 @@ olderBtn.addEventListener("click", function () {
     resetTimer();
     correctAnswerStyle();
     incrementScore();
-    setTimeout(resetStyles, 2000);
-    setTimeout(newRandomFigure, 2000);
-    setTimeout(startTimer, 2000);
+    setTimeout(resetStyles, 1500);
+    setTimeout(newRandomFigure, 1500);
+    setTimeout(startTimer, 1500);
   } else {
     // User is incorrect
     resetTimer();
@@ -588,9 +586,9 @@ youngerBtn.addEventListener("click", function () {
     resetTimer();
     correctAnswerStyle();
     incrementScore();
-    setTimeout(resetStyles, 2000);
-    setTimeout(newRandomFigure, 2000);
-    setTimeout(startTimer, 2000);
+    setTimeout(resetStyles, 1500);
+    setTimeout(newRandomFigure, 1500);
+    setTimeout(startTimer, 1500);
   } else {
     // User is incorrect
     resetTimer();

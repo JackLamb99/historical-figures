@@ -202,7 +202,7 @@ h2 {
   height: 50px;
   background-color: #654c8c;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 35px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -296,7 +296,7 @@ h2 {
   #divider-circle {
     width: 60px;
     height: 60px;
-    font-size: 30px;
+    font-size: 42.5px;
   }
 
   .btn-game {
@@ -375,7 +375,7 @@ h2 {
   #divider-circle {
     width: 70px;
     height: 70px;
-    font-size: 35px;
+    font-size: 50px;
   }
 
   .btn-game {
