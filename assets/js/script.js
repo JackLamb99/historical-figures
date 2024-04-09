@@ -268,8 +268,11 @@ var guessCard = document.getElementById("guess-card");
 // Gets the "reveal" card
 var revealCard = document.getElementById("reveal-card");
 
-// Gets the action buttons to display the "reveal" card
+// Gets the "Younger" and "Older" action buttons
 var actionBtns = document.getElementsByClassName("btn-reveal-card");
+
+// Gets the "Menu" and "Play Again" buttons
+var endGameBtns = document.getElementsByClassName("btn-game-ended");
 
 // Display functions
 
@@ -357,14 +360,20 @@ function randomFigures() {
   baseFigureName.innerText = randomFigure1.figureName;
   baseFigureImg.innerHTML = randomFigure1.figureImg;
   baseFigureDesc.innerText = randomFigure1.figureDesc;
-  baseFigureYear.innerText = randomFigure1.figureYear < 0 ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE` : `Born: ${randomFigure1.figureYear} CE`;
+  baseFigureYear.innerText =
+    randomFigure1.figureYear < 0
+      ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE`
+      : `Born: ${randomFigure1.figureYear} CE`;
 
   guessFigureName.innerText = randomFigure2.figureName;
 
   revealFigureName.innerText = randomFigure2.figureName;
   revealFigureImg.innerHTML = randomFigure2.figureImg;
   revealFigureDesc.innerText = randomFigure2.figureDesc;
-  revealFigureYear.innerText = randomFigure2.figureYear < 0 ? `Born: ${Math.abs(randomFigure2.figureYear)} BCE` : `Born: ${randomFigure2.figureYear} CE`;
+  revealFigureYear.innerText =
+    randomFigure2.figureYear < 0
+      ? `Born: ${Math.abs(randomFigure2.figureYear)} BCE`
+      : `Born: ${randomFigure2.figureYear} CE`;
 }
 
 /**
@@ -411,7 +420,7 @@ function resetStyles() {
  */
 function newRandomFigure() {
   // Replace data from randomFigure1 with the data from randomFigure2
-  randomFigure1 = randomFigure2
+  randomFigure1 = randomFigure2;
 
   // Get a new random figure for randomFigure2
   var chooseRandomFigure = Math.floor(Math.random() * figures.length);
@@ -428,14 +437,29 @@ function newRandomFigure() {
   baseFigureName.innerText = randomFigure1.figureName;
   baseFigureImg.innerHTML = randomFigure1.figureImg;
   baseFigureDesc.innerText = randomFigure1.figureDesc;
-  baseFigureYear.innerText = randomFigure1.figureYear < 0 ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE` : `Born: ${randomFigure1.figureYear} CE`;
+  baseFigureYear.innerText =
+    randomFigure1.figureYear < 0
+      ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE`
+      : `Born: ${randomFigure1.figureYear} CE`;
 
   guessFigureName.innerText = randomFigure2.figureName;
 
   revealFigureName.innerText = randomFigure2.figureName;
   revealFigureImg.innerHTML = randomFigure2.figureImg;
   revealFigureDesc.innerText = randomFigure2.figureDesc;
-  revealFigureYear.innerText = randomFigure2.figureYear < 0 ? `Born: ${Math.abs(randomFigure2.figureYear)} BCE` : `Born: ${randomFigure2.figureYear} CE`;
+  revealFigureYear.innerText =
+    randomFigure2.figureYear < 0
+      ? `Born: ${Math.abs(randomFigure2.figureYear)} BCE`
+      : `Born: ${randomFigure2.figureYear} CE`;
+}
+
+function endGame() {
+  for (var i = 0; i < endGameBtns.length; i++) {
+    endGameBtns[i].style.display = "block";
+  }
+  for (var i = 0; i < actionBtns.length; i++) {
+    actionBtns[i].style.display = "none";
+  }
 }
 
 // Game actions
@@ -455,6 +479,7 @@ olderBtn.addEventListener("click", function () {
   } else {
     // User is incorrect
     incorrectAnswerStyle();
+    endGame();
   }
 });
 
@@ -470,5 +495,6 @@ youngerBtn.addEventListener("click", function () {
   } else {
     // User is incorrect
     incorrectAnswerStyle();
+    endGame();
   }
 });
