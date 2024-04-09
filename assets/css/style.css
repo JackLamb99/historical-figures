@@ -69,14 +69,6 @@ h2 {
   border-radius: 15px;
 }
 
-.btn:hover {
-  background-color: #ff7518;
-  border-color: #ff7518;
-  color: #ffffff;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
 /* Menu page */
 .btn-menu {
   font-size: 10vw;
@@ -104,12 +96,6 @@ h2 {
   margin: 10px 0;
 }
 
-#github-link:hover {
-  text-decoration: none;
-  color: #ff7518;
-  transition: 0.4s;
-}
-
 /* Instructions page */
 #instructions-text {
   margin: 0 10px 0;
@@ -129,12 +115,6 @@ h2 {
   top: 0;
   left: 0;
   margin: 10px 0 0 10px;
-}
-
-#back-arrow:hover {
-  color: #ff7518;
-  transition: 0.4s;
-  cursor: pointer;
 }
 
 /* Game page */
@@ -265,6 +245,29 @@ h2 {
 
 .btn-game-ended {
   display: none;
+}
+
+/* Media Query: apply hover effects only on compatible devices */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: #ff7518;
+    border-color: #ff7518;
+    color: #ffffff;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  #github-link:hover {
+    text-decoration: none;
+    color: #ff7518;
+    transition: 0.4s;
+  }
+
+  #back-arrow:hover {
+    color: #ff7518;
+    transition: 0.4s;
+    cursor: pointer;
+  }
 }
 
 /* Media Query: medium mobile devices (400px and up) */
