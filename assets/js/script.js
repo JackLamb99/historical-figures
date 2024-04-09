@@ -252,7 +252,6 @@ var instructions = document.getElementById("instructions-area");
 
 var game = document.getElementById("game-area");
 
-
 // Buttons
 var instructionsBtn = document.getElementById("btn-instructions");
 
@@ -260,12 +259,10 @@ var playBtn = document.getElementById("btn-play");
 
 var returnBtn = document.getElementById("back-arrow");
 
-
 // Cards
 var guessCard = document.getElementById("guess-card");
 
 var revealCard = document.getElementById("reveal-card");
-
 
 // Action buttons
 var actionBtns = document.getElementsByClassName("btn-reveal-card");
@@ -279,7 +276,6 @@ var olderBtn = document.getElementById("btn-older");
 var menuBtn = document.getElementById("btn-menu");
 
 var playAgainBtn = document.getElementById("btn-play-again");
-
 
 // Card elements
 var baseFigureName = document.getElementById("base-figure-name");
@@ -300,14 +296,10 @@ var revealFigureDesc = document.getElementById("reveal-figure-description");
 
 var revealFigureYear = document.getElementById("reveal-figure-year");
 
-
 // Random figure variables
 var randomFigure1, randomFigure2;
 
-// Scores
 var score = document.getElementById("current-score");
-
-var highscore = document.getElementById("high-score");
 
 // Diviver
 var dividerCircle = document.getElementById("divider-circle");
@@ -468,10 +460,41 @@ function checkIfOlder() {
   return randomFigure1.figureYear > randomFigure2.figureYear;
 }
 
+/**
+ * Retrieve the high score from localStorage
+ */
+function getHighScore() {
+  return localStorage.getItem("highScore") || 0; // Defaults to 0 if no high score in storage
+}
+
+/**
+ * Update and store the high score in localStorage
+ */
+function updateHighScore(score) {
+  // Get the current high score
+  var currentHighScore = getHighScore();
+  // Update the highscore if greater than the current high score
+  if (score > currentHighScore) {
+    localStorage.setItem("highScore", score);
+  }
+}
+
+function displayHighScore() {
+  var highScoreSpans = document.getElementsByClassName("high-score");
+  // Get the high score value
+  var highScoreValue = getHighScore();
+  // Update the innerText on the high score spans
+  for (var i = 0; i < highScoreSpans.length; i++) {
+    highScoreSpans[i].innerText = highScoreValue;
+  }
+}
+
 function incrementScore() {
   var currentScore = parseInt(score.innerText);
   var newScore = currentScore + 1;
   score.innerText = newScore;
+  updateHighScore(newScore);
+  displayHighScore();
 }
 
 function correctAnswerStyle() {
@@ -508,6 +531,10 @@ function resetGame() {
 }
 
 // Event listeners
+
+document.addEventListener("DOMContentLoaded", function () {
+  displayHighScore();
+})
 
 instructionsBtn.addEventListener("click", displayInstructions);
 
