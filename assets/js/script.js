@@ -242,57 +242,72 @@ let figures = [
   },
 ];
 
-// Display variables
-
-// Gets the Menu page
+// Variables
+// Pages
 var menu = document.getElementById("menu-area");
-
-// Gets the Instructions page
 var instructions = document.getElementById("instructions-area");
-
-// Gets the Game page
 var game = document.getElementById("game-area");
 
-// Gets the button that opens the Instructions page
+// Buttons
 var instructionsBtn = document.getElementById("btn-instructions");
-
-// Gets the button that opens the Game page
 var playBtn = document.getElementById("btn-play");
-
-// Gets the back button to return to the Menu page
 var returnBtn = document.getElementById("back-arrow");
 
-// Gets the "guess" card
+// Cards
 var guessCard = document.getElementById("guess-card");
-
-// Gets the "reveal" card
 var revealCard = document.getElementById("reveal-card");
 
-// Gets the "Younger" and "Older" action buttons
+// Action buttons
 var actionBtns = document.getElementsByClassName("btn-reveal-card");
-
-// Gets the "Menu" and "Play Again" buttons
 var endGameBtns = document.getElementsByClassName("btn-game-ended");
+var youngerBtn = document.getElementById("btn-younger");
+var olderBtn = document.getElementById("btn-older");
+var menuBtn = document.getElementById("btn-menu");
+var playAgainBtn = document.getElementById("btn-play-again");
+
+// Card elements
+var baseFigureName = document.getElementById("base-figure-name");
+var baseFigureImg = document.getElementById("base-figure-img");
+var baseFigureDesc = document.getElementById("base-figure-description");
+var baseFigureYear = document.getElementById("base-figure-year");
+var guessFigureName = document.getElementById("guess-name");
+var revealFigureName = document.getElementById("reveal-figure-name");
+var revealFigureImg = document.getElementById("reveal-figure-img");
+var revealFigureDesc = document.getElementById("reveal-figure-description");
+var revealFigureYear = document.getElementById("reveal-figure-year");
+
+// Random figure variables
+var randomFigure1, randomFigure2;
+
+// Scores
+var score = document.getElementById("current-score");
+var highscore = document.getElementById("high-score");
+
+// Diviver
+var dividerCircle = document.getElementById("divider-circle");
+var dividerLine = document.getElementById("divider-line");
 
 // Display functions
-
-// When the user clicks the "Instructions" button, open the Instructions page
-instructionsBtn.onclick = function () {
-  instructions.style.display = "block";
-  menu.style.display = "none";
-};
-
-// When the user clicks the back button, return to the Menu page
-returnBtn.onclick = function () {
+// Display Menu
+function displayMenu() {
   menu.style.display = "block";
   instructions.style.display = "none";
-};
+  game.style.display = "none";
+}
 
-// When the user clicks the "Play" button, open the Game page
-playBtn.onclick = function () {
+// Display Instructions
+function displayInstructions() {
+  instructions.style.display = "block";
+  menu.style.display = "none";
+  game.style.display = "none";
+}
+
+// Display Game
+function displayGame() {
   game.style.display = "block";
   menu.style.display = "none";
-};
+  instructions.style.display = "none";
+}
 
 // When the user clicks either action button, display the "reveal" card
 for (var i = 0; i < actionBtns.length; i++) {
@@ -302,42 +317,7 @@ for (var i = 0; i < actionBtns.length; i++) {
   });
 }
 
-// Game variables
-
-// Base card elements
-var baseFigureName = document.getElementById("base-figure-name");
-var baseFigureImg = document.getElementById("base-figure-img");
-var baseFigureDesc = document.getElementById("base-figure-description");
-var baseFigureYear = document.getElementById("base-figure-year");
-
-// Guess card name
-var guessFigureName = document.getElementById("guess-name");
-
-// Reveal card elements
-var revealFigureName = document.getElementById("reveal-figure-name");
-var revealFigureImg = document.getElementById("reveal-figure-img");
-var revealFigureDesc = document.getElementById("reveal-figure-description");
-var revealFigureYear = document.getElementById("reveal-figure-year");
-
-// Random figure variables
-var randomFigure1, randomFigure2;
-
-// Action buttons
-var youngerBtn = document.getElementById("btn-younger");
-var olderBtn = document.getElementById("btn-older");
-var menuBtn = document.getElementById("btn-menu");
-var playAgainBtn = document.getElementById("btn-play-again");
-
-// Scores
-var score = document.getElementById("current-score");
-var highscore = document.getElementById("high-score");
-
-// Diviver text and colour
-var dividerCircle = document.getElementById("divider-circle");
-var dividerLine = document.getElementById("divider-line");
-
 // Game functions
-
 /**
  * Gets two random figures from the array and
  * applies their details to the game cards.
@@ -374,44 +354,6 @@ function randomFigures() {
     randomFigure2.figureYear < 0
       ? `Born: ${Math.abs(randomFigure2.figureYear)} BCE`
       : `Born: ${randomFigure2.figureYear} CE`;
-}
-
-/**
- * Checks if randomFigure1 (base card) is greater than randomFigure2 (reveal card).
- * Returns true if randomFigure2 is older.
- * Returns false if randomFigure2 is younger.
- */
-function checkIfOlder() {
-  return randomFigure1.figureYear > randomFigure2.figureYear;
-}
-
-function incrementScore() {
-  var currentScore = parseInt(score.innerText);
-  var newScore = currentScore + 1;
-  score.innerText = newScore;
-}
-
-function correctAnswerStyle() {
-  dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
-  dividerCircle.style.backgroundColor = "#029e61";
-  dividerCircle.style.fontSize = "40px";
-  dividerLine.style.backgroundColor = "#029e61";
-}
-
-function incorrectAnswerStyle() {
-  dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-  dividerCircle.style.backgroundColor = "#ff0000";
-  dividerCircle.style.fontSize = "40px";
-  dividerLine.style.backgroundColor = "#ff0000";
-}
-
-function resetStyles() {
-  revealCard.style.display = "";
-  guessCard.style.display = "";
-  dividerCircle.innerHTML = "10";
-  dividerCircle.style.backgroundColor = "";
-  dividerCircle.style.fontSize = "";
-  dividerLine.style.backgroundColor = "";
 }
 
 /**
@@ -462,11 +404,73 @@ function endGame() {
   }
 }
 
+/**
+ * Checks if randomFigure1 (base card) is greater than randomFigure2 (reveal card).
+ * Returns true if randomFigure2 is older.
+ * Returns false if randomFigure2 is younger.
+ */
+function checkIfOlder() {
+  return randomFigure1.figureYear > randomFigure2.figureYear;
+}
+
+function incrementScore() {
+  var currentScore = parseInt(score.innerText);
+  var newScore = currentScore + 1;
+  score.innerText = newScore;
+}
+
+function correctAnswerStyle() {
+  dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
+  dividerCircle.style.backgroundColor = "#029e61";
+  dividerCircle.style.fontSize = "40px";
+  dividerLine.style.backgroundColor = "#029e61";
+}
+
+function incorrectAnswerStyle() {
+  dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  dividerCircle.style.backgroundColor = "#ff0000";
+  dividerCircle.style.fontSize = "40px";
+  dividerLine.style.backgroundColor = "#ff0000";
+}
+
+function resetStyles() {
+  revealCard.style.display = "";
+  guessCard.style.display = "";
+  dividerCircle.innerHTML = "10";
+  dividerCircle.style.backgroundColor = "";
+  dividerCircle.style.fontSize = "";
+  dividerLine.style.backgroundColor = "";
+}
+
+function resetGame() {
+  for (var i = 0; i < endGameBtns.length; i++) {
+    endGameBtns[i].style.display = "none";
+  }
+  for (var i = 0; i < actionBtns.length; i++) {
+    actionBtns[i].style.display = "";
+  }
+  score.innerText = "0";
+}
+
+// Event listeners
+instructionsBtn.addEventListener("click", displayInstructions);
+returnBtn.addEventListener("click", displayMenu);
+playBtn.addEventListener("click", function () {
+  displayGame();
+  randomFigures();
+});
+menuBtn.addEventListener("click", function() {
+  displayMenu();
+  resetGame();
+  resetStyles();
+});
+playAgainBtn.addEventListener("click", function() {
+  resetGame();
+  resetStyles();
+  randomFigures();
+});
+
 // Game actions
-
-// Call the randomFigure function when the "Play" button on the Menu is clicked
-playBtn.addEventListener("click", randomFigures);
-
 // Older button click event handler
 olderBtn.addEventListener("click", function () {
   // if randomFigure2 is older
