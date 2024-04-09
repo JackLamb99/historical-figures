@@ -1,4 +1,5 @@
 // Figures array
+
 let figures = [
   {
     figureName: "Aristotle",
@@ -243,52 +244,80 @@ let figures = [
 ];
 
 // Variables
+
 // Pages
 var menu = document.getElementById("menu-area");
+
 var instructions = document.getElementById("instructions-area");
+
 var game = document.getElementById("game-area");
+
 
 // Buttons
 var instructionsBtn = document.getElementById("btn-instructions");
+
 var playBtn = document.getElementById("btn-play");
+
 var returnBtn = document.getElementById("back-arrow");
+
 
 // Cards
 var guessCard = document.getElementById("guess-card");
+
 var revealCard = document.getElementById("reveal-card");
+
 
 // Action buttons
 var actionBtns = document.getElementsByClassName("btn-reveal-card");
+
 var endGameBtns = document.getElementsByClassName("btn-game-ended");
+
 var youngerBtn = document.getElementById("btn-younger");
+
 var olderBtn = document.getElementById("btn-older");
+
 var menuBtn = document.getElementById("btn-menu");
+
 var playAgainBtn = document.getElementById("btn-play-again");
+
 
 // Card elements
 var baseFigureName = document.getElementById("base-figure-name");
+
 var baseFigureImg = document.getElementById("base-figure-img");
+
 var baseFigureDesc = document.getElementById("base-figure-description");
+
 var baseFigureYear = document.getElementById("base-figure-year");
+
 var guessFigureName = document.getElementById("guess-name");
+
 var revealFigureName = document.getElementById("reveal-figure-name");
+
 var revealFigureImg = document.getElementById("reveal-figure-img");
+
 var revealFigureDesc = document.getElementById("reveal-figure-description");
+
 var revealFigureYear = document.getElementById("reveal-figure-year");
+
 
 // Random figure variables
 var randomFigure1, randomFigure2;
 
 // Scores
 var score = document.getElementById("current-score");
+
 var highscore = document.getElementById("high-score");
 
 // Diviver
 var dividerCircle = document.getElementById("divider-circle");
+
 var dividerLine = document.getElementById("divider-line");
+
 var countdown;
 
 // Display functions
+
 // Display Menu
 function displayMenu() {
   menu.style.display = "block";
@@ -319,6 +348,7 @@ for (var i = 0; i < actionBtns.length; i++) {
 }
 
 // Game functions
+
 /**
  * Gets two random figures from the array and
  * applies their details to the game cards.
@@ -445,16 +475,16 @@ function incrementScore() {
 }
 
 function correctAnswerStyle() {
-  dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
+  dividerCircle.innerHTML = `<i class="fa-regular fa-circle-check"></i>`;
   dividerCircle.style.backgroundColor = "#029e61";
-  dividerCircle.style.fontSize = "40px";
+  dividerCircle.style.fontSize = "50px";
   dividerLine.style.backgroundColor = "#029e61";
 }
 
 function incorrectAnswerStyle() {
-  dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  dividerCircle.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
   dividerCircle.style.backgroundColor = "#ff0000";
-  dividerCircle.style.fontSize = "40px";
+  dividerCircle.style.fontSize = "50px";
   dividerLine.style.backgroundColor = "#ff0000";
 }
 
@@ -478,18 +508,23 @@ function resetGame() {
 }
 
 // Event listeners
+
 instructionsBtn.addEventListener("click", displayInstructions);
+
 returnBtn.addEventListener("click", displayMenu);
+
 playBtn.addEventListener("click", function () {
   displayGame();
   randomFigures();
   startTimer();
 });
+
 menuBtn.addEventListener("click", function () {
   displayMenu();
   resetGame();
   resetStyles();
 });
+
 playAgainBtn.addEventListener("click", function () {
   resetGame();
   resetStyles();
@@ -498,6 +533,7 @@ playAgainBtn.addEventListener("click", function () {
 });
 
 // Game actions
+
 // Older button click event handler
 olderBtn.addEventListener("click", function () {
   // if randomFigure2 is older
