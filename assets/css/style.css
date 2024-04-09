@@ -108,6 +108,10 @@ h2 {
   font-size: 5vw;
 }
 
+#instructions-list > li {
+  margin-bottom: 20px;
+}
+
 #back-arrow {
   font-size: 15vw;
   text-decoration: none;
