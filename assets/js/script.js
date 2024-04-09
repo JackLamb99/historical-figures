@@ -286,6 +286,7 @@ var highscore = document.getElementById("high-score");
 // Diviver
 var dividerCircle = document.getElementById("divider-circle");
 var dividerLine = document.getElementById("divider-line");
+var countdown;
 
 // Display functions
 // Display Menu
@@ -404,6 +405,30 @@ function endGame() {
   }
 }
 
+function startTimer() {
+  var seconds = 9;
+  countdown = setInterval(function () {
+    dividerCircle.innerText = seconds;
+
+    // Decrease seconds
+    seconds--;
+
+    // If timer reaches 0
+    if (seconds < 0) {
+      // Stop the countdown
+      clearInterval(countdown);
+      // Call functions to end the game
+      endGame();
+      incorrectAnswerStyle();
+    }
+  }, 1000); // Updates the timer every 1000 milliseconds (1 second)
+}
+
+function resetTimer() {
+  clearInterval(countdown);
+  dividerCircle.innerText = "";
+}
+
 /**
  * Checks if randomFigure1 (base card) is greater than randomFigure2 (reveal card).
  * Returns true if randomFigure2 is older.
@@ -458,16 +483,18 @@ returnBtn.addEventListener("click", displayMenu);
 playBtn.addEventListener("click", function () {
   displayGame();
   randomFigures();
+  startTimer();
 });
-menuBtn.addEventListener("click", function() {
+menuBtn.addEventListener("click", function () {
   displayMenu();
   resetGame();
   resetStyles();
 });
-playAgainBtn.addEventListener("click", function() {
+playAgainBtn.addEventListener("click", function () {
   resetGame();
   resetStyles();
   randomFigures();
+  startTimer();
 });
 
 // Game actions
@@ -476,12 +503,15 @@ olderBtn.addEventListener("click", function () {
   // if randomFigure2 is older
   if (checkIfOlder()) {
     // User is correct
+    resetTimer();
     correctAnswerStyle();
     incrementScore();
     setTimeout(resetStyles, 2000);
     setTimeout(newRandomFigure, 2000);
+    setTimeout(startTimer, 2000);
   } else {
     // User is incorrect
+    resetTimer();
     incorrectAnswerStyle();
     endGame();
   }
@@ -492,12 +522,15 @@ youngerBtn.addEventListener("click", function () {
   // If randomFigure2 is younger
   if (!checkIfOlder()) {
     // User is correct
+    resetTimer();
     correctAnswerStyle();
     incrementScore();
     setTimeout(resetStyles, 2000);
     setTimeout(newRandomFigure, 2000);
+    setTimeout(startTimer, 2000);
   } else {
     // User is incorrect
+    resetTimer();
     incorrectAnswerStyle();
     endGame();
   }
