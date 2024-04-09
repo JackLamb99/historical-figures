@@ -316,6 +316,7 @@ var revealFigureImg = document.getElementById("reveal-figure-img");
 var revealFigureDesc = document.getElementById("reveal-figure-description");
 var revealFigureYear = document.getElementById("reveal-figure-year");
 
+// Random figure variables
 var randomFigure1, randomFigure2;
 
 // Action buttons
@@ -356,30 +357,14 @@ function randomFigures() {
   baseFigureName.innerText = randomFigure1.figureName;
   baseFigureImg.innerHTML = randomFigure1.figureImg;
   baseFigureDesc.innerText = randomFigure1.figureDesc;
-  // Check if the figureYear is a negative number
-  if (randomFigure1.figureYear < 0) {
-    // Modify the string to display "BCE" after the year if negative
-    baseFigureYear.innerText = `Born: ${Math.abs(
-      randomFigure1.figureYear
-    )} BCE`;
-  } else {
-    baseFigureYear.innerText = `Born: ${randomFigure1.figureYear}`;
-  }
+  baseFigureYear.innerText = randomFigure1.figureYear < 0 ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE` : `Born: ${randomFigure1.figureYear} CE`;
 
   guessFigureName.innerText = randomFigure2.figureName;
 
   revealFigureName.innerText = randomFigure2.figureName;
   revealFigureImg.innerHTML = randomFigure2.figureImg;
   revealFigureDesc.innerText = randomFigure2.figureDesc;
-  // Check if the figureYear is a negative number
-  if (randomFigure2.figureYear < 0) {
-    // Modify the string to display "BCE" after the year if negative
-    revealFigureYear.innerText = `Born: ${Math.abs(
-      randomFigure2.figureYear
-    )} BCE`;
-  } else {
-    revealFigureYear.innerText = `Born: ${randomFigure2.figureYear}`;
-  }
+  revealFigureYear.innerText = randomFigure2.figureYear < 0 ? `Born: ${Math.abs(randomFigure2.figureYear)} BCE` : `Born: ${randomFigure2.figureYear} CE`;
 }
 
 /**
@@ -400,14 +385,14 @@ function incrementScore() {
 function correctAnswerStyle() {
   dividerCircle.innerHTML = `<i class="fa-solid fa-check"></i>`;
   dividerCircle.style.backgroundColor = "#029e61";
-  dividerCircle.style.fontSize = "50px";
+  dividerCircle.style.fontSize = "40px";
   dividerLine.style.backgroundColor = "#029e61";
 }
 
 function incorrectAnswerStyle() {
   dividerCircle.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
   dividerCircle.style.backgroundColor = "#ff0000";
-  dividerCircle.style.fontSize = "50px";
+  dividerCircle.style.fontSize = "40px";
   dividerLine.style.backgroundColor = "#ff0000";
 }
 
@@ -418,6 +403,39 @@ function resetStyles() {
   dividerCircle.style.backgroundColor = "";
   dividerCircle.style.fontSize = "";
   dividerLine.style.backgroundColor = "";
+}
+
+/**
+ * Replaces the base card figure with the reveal card figure
+ * and gets a new random figure for the reveal/guess card.
+ */
+function newRandomFigure() {
+  // Replace data from randomFigure1 with the data from randomFigure2
+  randomFigure1 = randomFigure2
+
+  // Get a new random figure for randomFigure2
+  var chooseRandomFigure = Math.floor(Math.random() * figures.length);
+
+  // Ensure the new random figure is different from the current randomFigure1
+  while (chooseRandomFigure === figures.indexOf(randomFigure1)) {
+    chooseRandomFigure = Math.floor(Math.random() * figures.length);
+  }
+
+  // Assign the new random figure to randomFigure2
+  randomFigure2 = figures[chooseRandomFigure];
+
+  // Update the cards with the new figures
+  baseFigureName.innerText = randomFigure1.figureName;
+  baseFigureImg.innerHTML = randomFigure1.figureImg;
+  baseFigureDesc.innerText = randomFigure1.figureDesc;
+  baseFigureYear.innerText = randomFigure1.figureYear < 0 ? `Born: ${Math.abs(randomFigure1.figureYear)} BCE` : `Born: ${randomFigure1.figureYear} CE`;
+
+  guessFigureName.innerText = randomFigure2.figureName;
+
+  revealFigureName.innerText = randomFigure2.figureName;
+  revealFigureImg.innerHTML = randomFigure2.figureImg;
+  revealFigureDesc.innerText = randomFigure2.figureDesc;
+  revealFigureYear.innerText = randomFigure2.figureYear < 0 ? `Born: ${Math.abs(randomFigure2.figureYear)} BCE` : `Born: ${randomFigure2.figureYear} CE`;
 }
 
 // Game actions
@@ -433,6 +451,7 @@ olderBtn.addEventListener("click", function () {
     correctAnswerStyle();
     incrementScore();
     setTimeout(resetStyles, 2000);
+    setTimeout(newRandomFigure, 2000);
   } else {
     // User is incorrect
     incorrectAnswerStyle();
@@ -447,6 +466,7 @@ youngerBtn.addEventListener("click", function () {
     correctAnswerStyle();
     incrementScore();
     setTimeout(resetStyles, 2000);
+    setTimeout(newRandomFigure, 2000);
   } else {
     // User is incorrect
     incorrectAnswerStyle();
