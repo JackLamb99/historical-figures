@@ -183,7 +183,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 1](docs/readme_videos/test1.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/55a905d3-93aa-4354-b11e-d4507e0990cc
 
 #### Test 2 - Returning to the menu page
 
@@ -199,7 +199,7 @@ Result:
 
 - Performed as expected, no errors occurred
 
-![Test 2](docs/readme_videos/test2.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/b44c5720-9ca2-4f4e-9823-643ff92eeac9
 
 #### Test 3 - Opening the game page
 
@@ -218,7 +218,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 3](docs/readme_videos/test3.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/8137bd85-69cc-4769-9ba1-30e39d684adb
 
 #### Test 4 - Submitting a correct answer
 
@@ -239,7 +239,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 4](docs/readme_videos/test4.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/80a9458b-bfc9-4ade-83d5-9ee4c64b766d
 
 #### Test 5 - Submitting an incorrect answer
 
@@ -258,7 +258,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 5](docs/readme_videos/test5.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/6a9a1414-0c84-47d4-8711-3164960b12d0
 
 #### Test 6 - Reaching the time limit
 
@@ -276,7 +276,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 6](docs/readme_videos/test6.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/2410d0da-3e81-43b3-93b2-837069c897f8
 
 #### Test 7 - Incrementing the scores
 
@@ -295,7 +295,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 7](docs/readme_videos/test7.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/bfe77e42-57db-46eb-81ce-96d32d11e569
 
 #### Test 8 - Playing the game again
 
@@ -316,7 +316,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 8](docs/readme_videos/test8.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/fa57ecd6-4e57-4938-89f3-87a7eede18a4
 
 #### Test 9 - Returning to the menu page
 
@@ -333,7 +333,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 9](docs/readme_videos/test9.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/8072891a-ccb8-42af-a1aa-3b964257886b
 
 #### Test 10 - Opening the Historical Figures GitHub repository
 
@@ -349,7 +349,7 @@ Result:
 
 * Performed as expected, no errors occurred
 
-![Test 10](docs/readme_videos/test10.mp4)
+https://github.com/JackLamb99/historical-figures/assets/155441638/28eabfb8-40b6-4731-aa6f-938b9e47b954
 
 ### Validator Testing
 
