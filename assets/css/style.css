@@ -51,7 +51,6 @@ h2 {
   font-size: 40px;
   font-size: 15vw;
   text-align: center;
-  padding: 10px;
 }
 
 .younger-colour {
@@ -99,7 +98,7 @@ h2 {
 /* Instructions page */
 #instructions-text {
   margin: 0 10px 0;
-  max-width: 500px;
+  max-width: 900px;
 }
 
 #instructions-list {
@@ -130,12 +129,11 @@ h2 {
 }
 
 #game-cards {
-  /* Sets the container size for the cards */
-  height: 70vh;
+  height: 80vh;
   width: 100%;
   position: absolute;
   /* Positions the container evenly between the socres and action-buttons */
-  top: 12%;
+  top: 8%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -212,6 +210,10 @@ h2 {
   justify-content: center;
   align-items: center;
   z-index: 1;
+}
+
+#divider-circle > i {
+  line-height: 0;
 }
 
 #action-btns {
@@ -388,4 +390,26 @@ h2 {
     height: 85px;
     margin: 0 20px 0;
   }
+}
+
+/* Media Query: stops overlapping on laptop devices (> 800px width AND < 800px height) */
+@media (min-width: 800px) and (max-height: 799px) {
+  #game-cards {
+    height: initial;
+    position: initial;
+  }
+
+  #action-btns {
+    flex-direction: column;
+    right: 0;
+    width: initial;
+    margin: 10px;
+  }
+
+.btn-game {
+  font-size: 25px;
+  width: 140px;
+  height: 70px;
+  margin: 10px;
+}
 }

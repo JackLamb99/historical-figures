@@ -532,7 +532,7 @@ function resetGame() {
 
 document.addEventListener("DOMContentLoaded", function () {
   displayHighScore();
-})
+});
 
 instructionsBtn.addEventListener("click", displayInstructions);
 
