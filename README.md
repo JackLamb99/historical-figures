@@ -1,110 +1,68 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Historical Figures
 
-Welcome USER_NAME,
+'Historical Figures' is an engaging trivia game that challenges players' knowledge of historical figures from various ages and cultures. From renowned leaders to influential inventors, every correct answer brings players closer to becoming a true historical virtuoso.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Mockup](docs/readme_images/mockup.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Features
 
-## Gitpod Reminders
+### Menu Page
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* A simple but aesthetically pleasing menu introduces users to the 'Historical Figures' game.
+* The primary function buttons are placed in the middle of the page to instantly attract the users' attention.
+* The "Instructions" button is placed first to encourage users to open this page before starting the game.
 
-`python3 -m http.server`
+![Menu Page](docs/readme_images/menu_page.png)
 
-A blue button should appear to click: _Make Public_,
+![Menu Page - Mobile](docs/readme_images/menu_page_mobile.png)
 
-Another blue button should appear to click: _Open Browser_.
+### Instructions Page
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Clicking the "Instructions" button will display the instructions page.
+* The instructions are clearly laid out and thoroughly explained so that users can get a good understanding of the content of the game before even opening it.
+* The return arrow icon is large enough to be easily noticed and is placed in the top-left corner, following a universal position for return buttons and so making its function clear and understandable.
 
-A blue button should appear to click: _Make Public_,
+![Instructions Page](docs/readme_images/instructions_page.png)
 
-Another blue button should appear to click: _Open Browser_.
+![Instructions Page - Mobile](docs/readme_images/instructions_page_mobile.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Game Page - Active Game
 
-To log into the Heroku toolbelt CLI:
+* Clicking the “Play” button will display the game page and automatically start a new game.
+* Users will then have 10 seconds, which counts down in the centre of the page, to submit an answer.
+* The “Younger” and “Older” answer submission buttons are placed directly under the bottom card, which makes it clear that they must compare that historical figure to the one above.
+* The “is…” text was an addition made after an initial round of user feedback to reinforce the aim of the game, by forming a “This figure is younger/older” statement in the users’ head when coupled with the buttons directly below.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Game Page - Active Game](docs/readme_images/game_page.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Game Page - Active Game - Mobile](docs/readme_images/game_page_mobile.png)
 
-------
+### Game Page - Correct Answer
 
-## Release History
+* Submitting a correct answer will display the full details of the figure bottom card, allowing the user to make a comparison between the two if desired.
+* The page divider will change to a shade of green and display a ‘check’ icon in-place of the timer so clearly indicate that the answer was correct.
+* The “Score” counter at the top of the page will increment by 1 point after each correct answer, allowing the user to keep track throughout the game.
+* The “High Score” will is stored locally to the users’ device and will update to match the “Score” when a new high score is set. This feature aims to encourage users to return the game in order to beat their own score and even share the game with others to challenge them to do the same.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Game Page - Correct Answer](docs/readme_images/game_correct.png)
 
-**September 20 2023:** Update Python version to 3.9.17.
+![Game Page - Correct Answer - Mobile](docs/readme_images/game_correct_mobile.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Game Page - Incorrect Answer
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* Submitting an incorrect answer will also display the full details of the figure on the bottom card, allowing the users to make a comparison between the two and understand why they were wrong.
+* Revealing card even when the wrong answer is submitted allows users to learn more about the figure, aiming to encouraging them to play again with their newfound knowledge as they now stand a better chance of answering correctly if the figure appears again.
+* The “Menu” and “Play Again” buttons allow for clear and straightforward navigation, the latter of which will automatically randomise the two figure cards, reset the score and start the timer again.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Game Page - Incorrect Answer](docs/readme_images/game_incorrect.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![Game Page - Incorrect Answer - Mobile](docs/readme_images/game_incorrect_mobile.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### 404 Page
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+* A simple 404 page allows users to navigate to the menu through a simple and eye-catching button, without having to do any extra typing or browser operations.
+* Including the ‘Historical Figures’ name and following the same styles of the main site aims to inform users that they are on the right track and discourages them from leaving out of frustration.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![404 Page](docs/readme_images/404_page.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+![404 Page - Mobile](docs/readme_images/404_page_mobile.png)
