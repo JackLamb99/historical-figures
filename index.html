@@ -51,8 +51,20 @@
           >Figures</span
         >
       </h1>
-      <button id="btn-instructions" class="btn btn-menu">Instructions</button>
-      <button id="btn-play" class="btn btn-menu">Play</button>
+      <button
+        id="btn-instructions"
+        class="btn btn-menu"
+        aria-label="click to open the instructions page"
+      >
+        Instructions
+      </button>
+      <button
+        id="btn-play"
+        class="btn btn-menu"
+        aria-label="click to open the game page"
+      >
+        Play
+      </button>
       <div id="menu-highscore">
         High Score: <span class="high-score">0</span>
       </div>
@@ -137,14 +149,32 @@
         </div>
       </div>
       <div id="action-btns">
-        <button id="btn-younger" class="btn btn-game btn-reveal-card">
+        <button
+          id="btn-younger"
+          class="btn btn-game btn-reveal-card"
+          aria-label="click to guess that the figure is younger"
+        >
           Younger
         </button>
-        <button id="btn-older" class="btn btn-game btn-reveal-card">
+        <button
+          id="btn-older"
+          class="btn btn-game btn-reveal-card"
+          aria-label="click to guess that the figure is older"
+        >
           Older
         </button>
-        <button id="btn-menu" class="btn btn-game btn-game-ended">Menu</button>
-        <button id="btn-play-again" class="btn btn-game btn-game-ended">
+        <button
+          id="btn-menu"
+          class="btn btn-game btn-game-ended"
+          aria-label="click to return the to menu"
+        >
+          Menu
+        </button>
+        <button
+          id="btn-play-again"
+          class="btn btn-game btn-game-ended"
+          aria-label="click to play the game again"
+        >
           Play Again
         </button>
       </div>
