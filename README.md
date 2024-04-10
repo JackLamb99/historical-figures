@@ -66,3 +66,36 @@
 ![404 Page](docs/readme_images/404_page.png)
 
 ![404 Page - Mobile](docs/readme_images/404_page_mobile.png)
+
+### Existing Features
+
+* Clearly structured and easily navigable pages
+* Straightforward interactive elements, all of which provide feedback through hover effects
+* A custom 404 page to reassure users
+* Responsive design
+
+### Possible Future Features
+
+* Styles for a “dark-mode” could be added and toggled with an animated button to allow users more control over the site’s aesthetic.
+* More figures could be added to bridge the large time gaps between some of the current figures.
+* A difficulty setting could be implemented with lesson known figures to challenge the more historically-knowledgeable users.
+
+## Design
+
+### Wireframe
+
+![Wireframe](docs/readme_images/wireframe.png)
+
+### Imagery
+
+The images used for each figure, be it a painting, statue or photograph, allow the users a more memorable way of recalling the figures when making their guesses.
+
+### Typography
+
+* The ‘Galada’ font from Google Fonts used for the ‘Historical Figures’ header is inspired by the more cursive handwriting that represents historical ages in modern media.
+* The ‘Rubik’ font from Google Fonts is clear and simple to allow users easily read necessary information quickly if required by the games fast-paced nature.
+
+### Background & Colour Palette
+
+* The background is inspired by ancient Greek patterns and allows for an aesthetically pleasing appearance without distracting from the content of the site or causing a problem for more visually impaired users.
+* The violet colour used for the text, buttons and more prominent design elements is more appealing than a standard monotone colour but doesn’t distract or cause visual issues. The shade used is also an exact combination of the green and red shades used in the ‘Historical Figures’ header.
