@@ -129,3 +129,254 @@ Git - Used to commit and push code during the development of the website
 [Pixelied]( https://pixelied.com/) - Used to convert the images used in the website to WEBP format
 
 [Tinify](https://tinypng.com/) - Used to compress the images to reduce file sizes for improved performance
+
+## Testing
+
+### Responsiveness
+
+The site was tested using Google Chrome, Microsoft Edge, Opera and Mozilla Firefox browsers to ensure responsiveness on screen sizes from 320px and upwards as defined in [WCAG 2.1 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) criteria for responsive design.
+
+Steps to test:
+
+1. Open the selected browser and navigate to the 'Historical Figures' website
+2. Open the developer tools to inspect
+3. Set the width to responsive at 320px
+4. Set the zoom to 50% to fit the larger screen sizes
+5. Click and drag the width toggle at the side of the page to maximum width
+
+The website was also opened on the following devices and no responsive issues were observed:
+
+* Samsung Galaxy S20
+* Apple iPhone 12
+* Apple iPad Air
+* Google Chromebook
+
+### Accessibility
+
+[Wave Accessibility](https://wave.webaim.org/) tool was used to ensure the website met the needs for visually impaired users:
+
+![Index Wave Results](docs/readme_images/index_wave.png)
+
+![404 Wave Results](docs/readme_images/404_wave.png)
+
+### Lighthouse Testing
+
+The 'Lighthouse' extension on Google DevTools was used to test the overall functionality and performance of the website:
+
+![Index Lighthouse Results](docs/readme_images/index_lighthouse.png)
+
+![404 Lighthouse Results](docs/readme_images/404_lighthouse.png)
+
+### Functional Testing
+
+#### Test 1 - Opening the instructions page
+
+Action:
+
+* Click the "Instructions" button
+
+Expectation:
+
+* The instructions page will be displayed
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 1](docs/readme_videos/test1.mp4)
+
+#### Test 2 - Returning to the menu page
+
+Action:
+
+- Click the return arrow icon on the instructions page
+
+Expectation:
+
+- The menu page will be displayed
+
+Result:
+
+- Performed as expected, no errors occurred
+
+![Test 2](docs/readme_videos/test2.mp4)
+
+#### Test 3 - Opening the game page
+
+Action:
+
+* Click the "Play" button
+
+Expectation:
+
+* The game page will be displayed 
+* The full details of a random figure will display on the top card
+* The name of another random figure and "is..." will display on the bottom card
+* The timer will start counting down from 10 seconds
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 3](docs/readme_videos/test3.mp4)
+
+#### Test 4 - Submitting a correct answer
+
+Action:
+
+* Click the correct answer button, either "Younger" or "Older"
+
+Expectation:
+
+* The bottom card will display the full details of the current figure
+* The divider will change to a green colour and display a 'check' icon in-place of the timer
+* After 1.5 seconds; The bottom card will replace the top card
+* The name of a random figure and "is..." will display on the bottom card
+* The divider will change back to its original colour and display the timer
+* The timer will start counting down from 10 seconds
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 4](docs/readme_videos/test4.mp4)
+
+#### Test 5 - Submitting an incorrect answer
+
+Action:
+
+* Click the incorrect answer button, either "Younger" or "Older"
+
+Expectation:
+
+* The bottom card will display the full details of the current figure
+* The divider will change to a red colour and display an 'X' icon in-place of the timer
+* The "Younger" button will be replaced by the "Menu" button
+* The "Older" button will be replaced by the "Play Again" button
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 5](docs/readme_videos/test5.mp4)
+
+#### Test 6 - Reaching the time limit
+
+Action:
+
+* Wait for the 10 second timer to end
+
+Expectation:
+
+* The divider will change to a red colour and display an 'X' icon in-place of the timer
+* The "Younger" button will be replaced by the "Menu" button
+* The "Older" button will be replaced by the "Play Again" button
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 6](docs/readme_videos/test6.mp4)
+
+#### Test 7 - Incrementing the scores
+
+Actions:
+
+* Click the correct answer button, either "Younger" or "Older" (repeat 6 times)
+* Click the incorrect answer button, either "Younger" or "Older"
+
+Expectation:
+
+* The "Score" will increase by 1 after each correct answer submission
+* After 3 correct answer submissions; the "High Score" (currently "3") will increase by 1 after each correct answer submission to match the current "Score"
+* After the incorrect answer submission; the "Score" and "High Score" will remain as "6"
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 7](docs/readme_videos/test7.mp4)
+
+#### Test 8 - Playing the game again
+
+Action:
+
+* Click the "Play Again" button
+
+Expectation:
+
+* The full details of a random figure will display on the top card
+* The name of another random figure and "is..." will display on the bottom card
+* The divider will change back to its original colour and display the timer
+* The timer will start counting down from 10 seconds
+* The "Score" will be reset to "0"
+* The "High Score" will remain unchanged
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 8](docs/readme_videos/test8.mp4)
+
+#### Test 9 - Returning to the menu page
+
+Action:
+
+* Click the "Menu" button
+
+Expectation:
+
+* The menu page will be displayed
+* The "High Score" will be "6" (matching the new "High Score" set on the game page)
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 9](docs/readme_videos/test9.mp4)
+
+#### Test 10 - Opening the Historical Figures GitHub repository
+
+Action:
+
+* Click the GitHub logo icon
+
+Expectation:
+
+* The Historical Figures GitHub repository will open in a new tab
+
+Result:
+
+* Performed as expected, no errors occurred
+
+![Test 10](docs/readme_videos/test10.mp4)
+
+### Validator Testing
+
+#### HTML
+
+No errors occurred when passing each page through the official [W3C Markup Validation Service](https://validator.w3.org/)
+
+#### Index Page
+
+![Index HTML Validator](docs/readme_images/index_html_validator.png)
+
+#### 404 Page
+
+![404 Page Validator](docs/readme_images/404_html_validator.png)
+
+#### CSS
+
+No errors occurred when passing through the official [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+![CSS Validator Results](docs/readme_images/css_validator.PNG)
+
+#### JavaScript
+
+Only one "warning" occurred when passing through the [JSHint JavaScript Validation Service](https://jshint.com/), however it does not affect the code and appears semantically sound
+
+![JavaScript Validator Results](docs/readme_images/js_validator.png)
+
+### Unfixed Bugs
+
+When submitting an answer through the "Younger" / "Older" buttons, users can "spam" click a button multiple times, which cause the game to trigger the next round multiple times and eventually crash the game. This bug can be easily fixed by refreshing the page and does not cause any lasting issues. I was unable to resolve this bug on time but will attempt to resolve in a future release.
