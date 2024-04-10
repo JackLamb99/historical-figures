@@ -108,7 +108,7 @@ h2 {
   font-size: 5vw;
 }
 
-#instructions-list > li {
+#instructions-list>li {
   margin-bottom: 20px;
 }
 
@@ -160,7 +160,7 @@ h2 {
   display: flex;
 }
 
-.figure-img > img {
+.figure-img>img {
   width: 100px;
   height: 120px;
   object-fit: cover;
@@ -213,7 +213,7 @@ h2 {
   z-index: 1;
 }
 
-#divider-circle > i {
+#divider-circle>i {
   line-height: 0;
 }
 
@@ -254,6 +254,61 @@ h2 {
   display: none;
 }
 
+/* 404 Page */
+#error-page>h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  font-size: 15vw;
+  text-align: center;
+  margin: 10px;
+}
+
+#error-page>h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  font-size: 10vw;
+  text-align: center;
+  margin: 10px;
+}
+
+#error-page>p {
+  font-size: 20px;
+  font-size: 5vw;
+  text-align: center;
+  margin: 10px;
+}
+
+#home-btn-container {
+  margin: 10px auto 10px;
+}
+
+#home-btn-container>a {
+  text-decoration: none;
+}
+
+#home-btn {
+  font-size: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto 0;
+  background-color: #654c8c;
+  color: #ffffff;
+  border: 5px solid #654c8c;
+  border-radius: 15px;
+}
+
+#home-btn:hover {
+  color: #ffffff;
+  background-color: #ff7518;
+  border-color: #ff7518;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
 /* Media Query: apply hover effects only on compatible devices */
 @media (hover: hover) {
   .btn:hover {
@@ -279,6 +334,7 @@ h2 {
 
 /* Media Query: medium mobile devices (400px and up) */
 @media screen and (min-width: 400px) {
+
   /* Game page */
   #game-scores {
     font-size: 25px;
@@ -290,7 +346,7 @@ h2 {
     height: 208px;
   }
 
-  .figure-img > img {
+  .figure-img>img {
     width: 128px;
     height: 154px;
     margin: 5px 5px 0 0;
@@ -316,6 +372,7 @@ h2 {
 
 /* Media Query: large mobile devices (500px and up) */
 @media screen and (min-width: 500px) {
+
   /* General styles */
   h1 {
     font-size: 100px;
@@ -369,7 +426,7 @@ h2 {
     height: 258px;
   }
 
-  .figure-img > img {
+  .figure-img>img {
     width: 165px;
     height: 198px;
     margin: 5px 10px 0 0;
@@ -391,6 +448,35 @@ h2 {
     height: 85px;
     margin: 0 20px 0;
   }
+
+  /* 404 Page */
+  #error-page>h1 {
+    padding: 50px 50px 0 50px;
+  }
+
+  #error-page>h2 {
+    font-size: 75px;
+    margin: 20px;
+  }
+
+  #error-page>h3 {
+    font-size: 50px;
+    margin: 20px;
+  }
+
+  #error-page>p {
+    font-size: 25px;
+    max-width: 500px;
+    margin: 20px auto 20px;
+  }
+
+  #home-btn-container {
+    margin: 20px auto 20px;
+  }
+
+  #home-btn {
+    font-size: 40px;
+  }
 }
 
 /* Media Query: stops overlapping on laptop devices (> 800px width AND < 800px height) */
@@ -411,10 +497,10 @@ h2 {
     margin: 10px;
   }
 
-.btn-game {
-  font-size: 25px;
-  width: 140px;
-  height: 70px;
-  margin: 10px;
-}
+  .btn-game {
+    font-size: 25px;
+    width: 140px;
+    height: 70px;
+    margin: 10px;
+  }
 }
