@@ -394,6 +394,10 @@ h2 {
 
 /* Media Query: stops overlapping on laptop devices (> 800px width AND < 800px height) */
 @media (min-width: 800px) and (max-height: 799px) {
+  #github-link {
+    left: 92%;
+  }
+
   #game-cards {
     height: initial;
     position: initial;
