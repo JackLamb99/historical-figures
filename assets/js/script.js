@@ -339,13 +339,6 @@ for (var i = 0; i < actionBtns.length; i++) {
   });
 }
 
-// Locks the screen to its default orientation if the API is supported
-if (screen.orientation && screen.orientation.lock) {
-  screen.orientation.lock("natural");
-} else {
-  console.log("Screen orientation API is not supported.");
-}
-
 // Game functions
 
 /**
