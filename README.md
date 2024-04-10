@@ -1,6 +1,6 @@
 # Historical Figures
 
-'Historical Figures' is an engaging trivia game that challenges players' knowledge of historical figures from various ages and cultures. From renowned leaders to influential inventors, every correct answer brings players closer to becoming a true historical virtuoso.
+'Historical Figures' is an engaging trivia game that challenges players' knowledge of historical figures from various ages and cultures. From renowned leaders to influential inventors, every correct answer brings players closer to becoming a true historical virtuoso. View the live site [here](https://github.com/JackLamb99/historical-figures)
 
 ![Mockup](docs/readme_images/mockup.png)
 
@@ -380,3 +380,37 @@ Only one "warning" occurred when passing through the [JSHint JavaScript Validati
 ### Unfixed Bugs
 
 When submitting an answer through the "Younger" / "Older" buttons, users can "spam" click a button multiple times, which cause the game to trigger the next round multiple times and eventually crash the game. This bug can be easily fixed by refreshing the page and does not cause any lasting issues. I was unable to resolve this bug on time but will attempt to resolve in a future release.
+
+## Deployment
+
+### Version Control
+
+The website was developed using the [Visual Studio Code](https://code.visualstudio.com/) desktop application and pushed to the remote repository [historical-figures](https://github.com/JackLamb99/historical-figures) on [GitHub](https://github.com/).
+
+The following git commands were used throughout its creation to push code to the remote repository:
+
+* `git add file` or `git add .` - This command was used to add the file(s) to the staging area before they were committed.
+* `git commit –m "commit message"` - This command was used to commit changes to the local repository queue.
+* `git push` - This command was used to push all committed code to the remote repository on GitHub.
+
+### Deployment to GitHub Pages
+
+The site was deployed to GitHub Pages, the steps to deploy are as follows:
+
+1. In the GitHub repository, navigate to the 'Settings' tab
+2. Select the 'Pages' option from the menu to the left
+3. Under 'Branch', in the 'Build and deployment' section, select the 'main' dropdown option
+4. Click 'Save'
+5. Refresh the page and live link will be displayed at the top of the page when published successfully
+
+The live link can be found here - https://github.com/JackLamb99/historical-figures
+
+### Clone the Repository Code Locally
+
+Open the selected GitHub repository you want to clone locally:
+
+1. Click on the 'Code' drop-down button
+2. Click on the 'HTTPS' option
+3. Copy the repository link
+4. Open your IDE
+5. Type `git clone copied-url` into the IDE terminal (Git must be installed for this step)
