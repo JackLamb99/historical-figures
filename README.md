@@ -414,3 +414,25 @@ Open the selected GitHub repository you want to clone locally:
 3. Copy the repository link
 4. Open your IDE
 5. Type `git clone copied-url` into the IDE terminal (Git must be installed for this step)
+
+## Credits
+
+### Guidance
+
+This [MDN Web Docs Guide](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) was used to understand and implement the localStorage property used for storing the "High Score" on the users' device
+
+### Media
+
+All images used in the website were found on [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) and are free to use
+
+The image used for the background pattern was found on [Toptal](https://www.toptal.com/designers/subtlepatterns/spikes-pattern/) and is free to use
+
+### Code Used
+
+* Favicon - The code used within the head of the html files to import the hourglass favicon was copied from the [Favicon Website](https://favicon.io/emoji-favicons/hourglass-done/)
+* Font Awesome - The script code used within the head of the html files to import the Font Awesome icons was provided in my kit on the [Font Awesome Wesbite](https://fontawesome.com/kits)
+* Google Fonts - The import url for the 'Galada' and 'Rubik' fonts was copied from the [Google Fonts Website](https://fonts.google.com/)
+
+### Acknowledgement
+
+[Gareth McGirr](https://github.com/Gareth-McGirr) - My Code Institute mentor
