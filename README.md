@@ -4,6 +4,41 @@
 
 ![Mockup](docs/readme_images/mockup.png)
 
+## Table of Contents
+
+* [Features](#features)
+    * [Menu Page](#menu-page)
+    * [Instructions Page](#instructions-page)
+    * [Game Page - Active Game](#game-page---active-game)
+    * [Game Page - Correct Answer](#game-page---correct-answer)
+    * [Game Page - Incorrect Answer](#game-page---incorrect-answer)
+    * [404 Page](#404-page)
+    * [Existing Features](#existing-features)
+    * [Possible Future Features](#possible-future-features)
+* [Design](#design)
+    * [Wireframe](#wireframe)
+    * [Imagery](#imagery)
+    * [Typography](#typography)
+    * [Background & Colour Palette](#background--colour-palette)
+* [Technologies](#technologies)
+* [Testing](#testing)
+    * [Responsiveness](#responsiveness)
+    * [Accessibility](#accessibility)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Functional Testing](#functional-testing)
+    * [Validator Testing](#validator-testing)
+    * [Unfixed Bugs](#unfixed-bugs)
+* [Deployment](#deployment)
+    * [Version Control](#version-control)
+    * [Deployment to GitHub Pages](#deployment-to-github-pages)
+    * [Clone the Repository Code Locally](#clone-the-repository-code-locally)
+* [Credits](#credits)
+    * [Guidance](#guidance)
+    * [Content](#content)
+    * [Media](#media)
+    * [Code Used](#code-used)
+    * [Acknowledgement](#acknowledgement)
+
 ## Features
 
 ### Menu Page
@@ -420,6 +455,10 @@ Open the selected GitHub repository you want to clone locally:
 ### Guidance
 
 This [MDN Web Docs Guide](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) was used to understand and implement the localStorage property used for storing the "High Score" on the users' device
+
+### Content
+
+The description and birth-year for each figure is based on information provided from the Knowledge Graph, Google's collection of information about people, places and things.
 
 ### Media
 
