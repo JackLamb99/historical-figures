@@ -1,6 +1,6 @@
 # Historical Figures
 
-'Historical Figures' is an engaging trivia game that challenges players' knowledge of historical figures from various ages and cultures. From renowned leaders to influential inventors, every correct answer brings players closer to becoming a true historical virtuoso. View the live site [here](https://github.com/JackLamb99/historical-figures)
+'Historical Figures' is an engaging trivia game that challenges players' knowledge of historical figures from various ages and cultures. From renowned leaders to influential inventors, every correct answer brings players closer to becoming a true historical virtuoso. View the live site [here](https://jacklamb99.github.io/historical-figures/)
 
 ![Mockup](docs/readme_images/mockup.png)
 
