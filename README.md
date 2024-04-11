@@ -75,9 +75,9 @@
 ### Game Page - Correct Answer
 
 * Submitting a correct answer will display the full details of the figure bottom card, allowing the user to make a comparison between the two if desired.
-* The page divider will change to a shade of green and display a 'check' icon in-place of the timer so clearly indicate that the answer was correct.
+* The page divider will change to a shade of green and display a 'check' icon in place of the timer to clearly indicate that the answer was correct.
 * The "Score" counter at the top of the page will increment by 1 point after each correct answer, allowing the user to keep track throughout the game.
-* The "High Score" will is stored locally to the users' device and will update to match the "Score" when a new high score is set. This feature aims to encourage users to return the game in order to beat their own score and even share the game with others to challenge them to do the same.
+* The "High Score" is stored locally on the user's device and will update to match the "Score" when a new high score is set. This feature aims to encourage users to return to the game in order to beat their own score and even share the game with others to challenge them to do the same.
 
 ![Game Page - Correct Answer](docs/readme_images/game_correct.png)
 
@@ -86,7 +86,7 @@
 ### Game Page - Incorrect Answer
 
 * Submitting an incorrect answer will also display the full details of the figure on the bottom card, allowing the users to make a comparison between the two and understand why they were wrong.
-* Revealing card even when the wrong answer is submitted allows users to learn more about the figure, aiming to encouraging them to play again with their newfound knowledge as they now stand a better chance of answering correctly if the figure appears again.
+* Revealing the card even when the wrong answer is submitted allows users to learn more about the figure, aiming to encourage them to play again with their newfound knowledge as they now stand a better chance of answering correctly if the figure appears again.
 * The "Menu" and "Play Again" buttons allow for clear and straightforward navigation, the latter of which will automatically randomise the two figure cards, reset the score and start the timer again.
 
 ![Game Page - Incorrect Answer](docs/readme_images/game_incorrect.png)
@@ -96,7 +96,7 @@
 ### 404 Page
 
 * A simple 404 page allows users to navigate to the menu through a simple and eye-catching button, without having to do any extra typing or browser operations.
-* Including the 'Historical Figures' name and following the same styles of the main site aims to inform users that they are on the right track and discourages them from leaving out of frustration.
+* Including the 'Historical Figures' name and following the same styles as the main site aims to inform users that they are on the right track and discourages them from leaving out of frustration.
 
 ![404 Page](docs/readme_images/404_page.png)
 
@@ -111,9 +111,9 @@
 
 ### Possible Future Features
 
-* Styles for a "dark-mode" could be added and toggled with an animated button to allow users more control over the site's aesthetic.
+* Styles for a "dark mode" could be added and toggled with an animated button to allow users more control over the site's aesthetic.
 * More figures could be added to bridge the large time gaps between some of the current figures.
-* A difficulty setting could be implemented with lesson known figures to challenge the more historically-knowledgeable users.
+* A difficulty setting could be implemented with lesser-known figures to challenge the more historically knowledgeable users.
 
 ## Design
 
@@ -127,8 +127,8 @@ The images used for each figure, be it a painting, statue or photograph, allow t
 
 ### Typography
 
-* The 'Galada' font from Google Fonts used for the ‘Historical Figures’ header is inspired by the more cursive handwriting that represents historical ages in modern media.
-* The 'Rubik' font from Google Fonts is clear and simple to allow users easily read necessary information quickly if required by the games fast-paced nature.
+* The 'Galada' font from Google Fonts used for the ‘Historical Figures’ header is inspired by the more cursive handwriting style that represents historical ages in modern media.
+* The 'Rubik' font from Google Fonts is clear and simple to allow users to easily read necessary information quickly if required by the game's fast-paced nature.
 
 ### Background & Colour Palette
 
@@ -145,7 +145,7 @@ HTML - The structure of the website was developed using HTML
 
 CSS - The website was styled using custom CSS in an external file
 
-JavaScript - The interactive elements and game logic was developed using custom JavaScript in an external file
+JavaScript - The interactive elements and game logic were developed using custom JavaScript in an external file
 
 [Visual Studio Code](https://code.visualstudio.com/) - The website was developed using the Visual Studio Code desktop application
 
@@ -188,7 +188,7 @@ The website was also opened on the following devices and no responsive issues we
 
 ### Accessibility
 
-[Wave Accessibility](https://wave.webaim.org/) tool was used to ensure the website met the needs for visually impaired users:
+[Wave Accessibility](https://wave.webaim.org/) tool was used to ensure the website met the needs of visually impaired users:
 
 ![Index Wave Results](docs/readme_images/index_wave.png)
 
@@ -245,8 +245,8 @@ Action:
 Expectation:
 
 * The game page will be displayed 
-* The full details of a random figure will display on the top card
-* The name of another random figure and "is..." will display on the bottom card
+* The full details of a random figure will be displayed on the top card
+* The name of another random figure and "is..." will be displayed on the bottom card
 * The timer will start counting down from 10 seconds
 
 Result:
@@ -264,9 +264,9 @@ Action:
 Expectation:
 
 * The bottom card will display the full details of the current figure
-* The divider will change to a green colour and display a 'check' icon in-place of the timer
+* The divider will change to a green colour and display a 'check' icon in place of the timer
 * After 1.5 seconds; The bottom card will replace the top card
-* The name of a random figure and "is..." will display on the bottom card
+* The name of a random figure and "is..." will be displayed on the bottom card
 * The divider will change back to its original colour and display the timer
 * The timer will start counting down from 10 seconds
 
@@ -285,7 +285,7 @@ Action:
 Expectation:
 
 * The bottom card will display the full details of the current figure
-* The divider will change to a red colour and display an 'X' icon in-place of the timer
+* The divider will change to a red colour and display an 'X' icon in place of the timer
 * The "Younger" button will be replaced by the "Menu" button
 * The "Older" button will be replaced by the "Play Again" button
 
@@ -299,11 +299,11 @@ https://github.com/JackLamb99/historical-figures/assets/155441638/6a9a1414-0c84-
 
 Action:
 
-* Wait for the 10 second timer to end
+* Wait for the 10-second timer to end
 
 Expectation:
 
-* The divider will change to a red colour and display an 'X' icon in-place of the timer
+* The divider will change to a red colour and display an 'X' icon in place of the timer
 * The "Younger" button will be replaced by the "Menu" button
 * The "Older" button will be replaced by the "Play Again" button
 
@@ -340,8 +340,8 @@ Action:
 
 Expectation:
 
-* The full details of a random figure will display on the top card
-* The name of another random figure and "is..." will display on the bottom card
+* The full details of a random figure will be displayed on the top card
+* The name of another random figure and "is..." will be displayed on the bottom card
 * The divider will change back to its original colour and display the timer
 * The timer will start counting down from 10 seconds
 * The "Score" will be reset to "0"
@@ -404,17 +404,17 @@ No errors occurred when passing each page through the official [W3C Markup Valid
 
 No errors occurred when passing through the official [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
-![CSS Validator Results](docs/readme_images/css_validator.PNG)
+![CSS Validator Results](docs/readme_images/css_validator.png)
 
 #### JavaScript
 
-Only one "warning" occurred when passing through the [JSHint JavaScript Validation Service](https://jshint.com/), however it does not affect the code and appears semantically sound
+Only one "warning" occurred when passing through the [JSHint JavaScript Validation Service](https://jshint.com/), however, it does not affect the code and appears semantically sound
 
 ![JavaScript Validator Results](docs/readme_images/js_validator.png)
 
 ### Unfixed Bugs
 
-When submitting an answer through the "Younger" / "Older" buttons, users can "spam" click a button multiple times, which cause the game to trigger the next round multiple times and eventually crash the game. This bug can be easily fixed by refreshing the page and does not cause any lasting issues. I was unable to resolve this bug on time but will attempt to resolve in a future release.
+When submitting an answer through the "Younger" / "Older" buttons, users can "spam" click a button multiple times, which causes the game to trigger the next round multiple times and eventually crash the game. This bug can be easily fixed by refreshing the page and does not cause any lasting issues. I was unable to resolve this bug on time but will attempt to resolve it in a future release.
 
 ## Deployment
 
@@ -436,7 +436,7 @@ The site was deployed to GitHub Pages, the steps to deploy are as follows:
 2. Select the 'Pages' option from the menu to the left
 3. Under 'Branch', in the 'Build and deployment' section, select the 'main' dropdown option
 4. Click 'Save'
-5. Refresh the page and live link will be displayed at the top of the page when published successfully
+5. Refresh the page and the live link will be displayed at the top of the page when published successfully
 
 The live link can be found here - https://github.com/JackLamb99/historical-figures
 
@@ -448,7 +448,7 @@ Open the selected GitHub repository you want to clone locally:
 2. Click on the 'HTTPS' option
 3. Copy the repository link
 4. Open your IDE
-5. Type `git clone copied-url` into the IDE terminal (Git must be installed for this step)
+5. Type `git clone copied-URL` into the IDE terminal (Git must be installed for this step)
 
 ## Credits
 
@@ -458,7 +458,7 @@ This [MDN Web Docs Guide](https://developer.mozilla.org/en-US/docs/Web/API/Windo
 
 ### Content
 
-The description and birth-year for each figure is based on information provided from the Knowledge Graph, Google's collection of information about people, places and things.
+The description and birth year for each figure are based on information provided by the Knowledge Graph, Google's collection of information about people, places and things.
 
 ### Media
 
@@ -468,9 +468,9 @@ The image used for the background pattern was found on [Toptal](https://www.topt
 
 ### Code Used
 
-* Favicon - The code used within the head of the html files to import the hourglass favicon was copied from the [Favicon Website](https://favicon.io/emoji-favicons/hourglass-done/)
-* Font Awesome - The script code used within the head of the html files to import the Font Awesome icons was provided in my kit on the [Font Awesome Wesbite](https://fontawesome.com/kits)
-* Google Fonts - The import url for the 'Galada' and 'Rubik' fonts was copied from the [Google Fonts Website](https://fonts.google.com/)
+* Favicon - The code used within the head of the HTML files to import the hourglass favicon was copied from the [Favicon Website](https://favicon.io/emoji-favicons/hourglass-done/)
+* Font Awesome - The script code used within the head of the HTML files to import the Font Awesome icons was provided in my kit on the [Font Awesome Website](https://fontawesome.com/kits)
+* Google Fonts - The import URL for the 'Galada' and 'Rubik' fonts was copied from the [Google Fonts Website](https://fonts.google.com/)
 
 ### Acknowledgement
 

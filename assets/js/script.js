@@ -382,8 +382,8 @@ for (var i = 0; i < actionBtns.length; i++) {
 // Game functions
 
 /**
- * Gets two random figures from the array and
- * applies their details to the game cards.
+ * Get two random figures from the array and
+ * apply their details to the game cards.
  */
 function randomFigures() {
   // Get a random figure from the array
@@ -420,8 +420,8 @@ function randomFigures() {
 }
 
 /**
- * Replaces the base card figure with the reveal card figure
- * and gets a new random figure for the reveal/guess card.
+ * Replace the base card figure with the reveal card figure
+ * and get a new random figure for the reveal/guess card.
  */
 function newRandomFigure() {
   // Replace data from randomFigure1 with the data from randomFigure2
@@ -483,7 +483,7 @@ function startTimer() {
       endGame();
       incorrectAnswerStyle();
     }
-  }, 1000); // Updates the timer every 1000 milliseconds (1 second)
+  }, 1000); // Update the timer every 1000 milliseconds (1 second)
 }
 
 function resetTimer() {
@@ -492,9 +492,9 @@ function resetTimer() {
 }
 
 /**
- * Checks if randomFigure1 (base card) is greater than randomFigure2 (reveal card).
- * Returns true if randomFigure2 is older.
- * Returns false if randomFigure2 is younger.
+ * Check if randomFigure1 (base card) is greater than randomFigure2 (reveal card).
+ * Return true if randomFigure2 is older.
+ * Return false if randomFigure2 is younger.
  */
 function checkIfOlder() {
   return randomFigure1.figureYear > randomFigure2.figureYear;
